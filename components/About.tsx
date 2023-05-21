@@ -6,6 +6,7 @@ import { TypographyH3, TypographyLead } from "./Typography";
 export default function About() {
   return (
     <motion.div
+      className="flex flex-col gap-4"
       initial={{ opacity: 0, y: 20 }}
       animate={{
         opacity: 1,
