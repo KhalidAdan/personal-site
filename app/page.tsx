@@ -34,10 +34,10 @@ export default function Home() {
           I help humans build software that solves problems.
         </TypographyH3>
         <TypographyLead>
-          I'm Khalid Adan, a software developer working out of Ottawa, Canada.
-          I've lead software teams and built products for start-ups, huge
-          enterprises and the public sector. Currently, I'm hacking on a product
-          called Skillbox, and hope to show something soon!
+          I&apos;m Khalid Adan, a software developer working out of Ottawa,
+          Canada. I&apos;ve lead software teams and built products for
+          start-ups, huge enterprises and the public sector. Currently, I&apos;m
+          hacking on a product called Skillbox, and hope to show something soon!
         </TypographyLead>
 
         <div className="flex items-center gap-1">
@@ -118,7 +118,7 @@ export default function Home() {
         <TypographyLarge>Stack</TypographyLarge>
       </div>
 
-      <div className="grid grid-cols-8 mt-4 gap-20">
+      <div className="grid sm:grid-cols-4 grid-cols-6 mt-4 md:gap-x-20 gap-y-6">
         <Avatar className="h-14 w-14 bg-white rounded-full border border-white">
           <AvatarImage src="/next.svg" alt="Next.js" />
           <AvatarFallback className="bg-accent-gray ">Next</AvatarFallback>
