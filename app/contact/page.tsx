@@ -1,10 +1,10 @@
-import ContactForm from "@/components/ContactForm";
 import {
   TypographyH3,
   TypographyLarge,
   TypographyMutedP,
   TypographySmall,
 } from "@/components/Typography";
+import ContactForm from "@/components/contact/ContactForm";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Clock } from "lucide-react";
 

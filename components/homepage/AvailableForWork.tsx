@@ -1,10 +1,10 @@
 "use client";
 
+import { TypographySmall } from "@/components/Typography";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import Link from "next/link";
-import { TypographySmall } from "./Typography";
-import { Button } from "./ui/button";
 
 export default function AvailableForWork() {
   return (

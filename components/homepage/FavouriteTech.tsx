@@ -1,9 +1,9 @@
 "use client";
 
+import { TypographyLarge } from "@/components/Typography";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
-import { TooltipHelper } from "./TooltipHelper";
-import { TypographyLarge } from "./Typography";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { TooltipHelper } from "../TooltipHelper";
 
 export default function FavouriteTech() {
   return (

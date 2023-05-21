@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TypographyH3, TypographyLead } from "./Typography";
+import { TypographyH3, TypographyLead } from "../Typography";
 
 export default function About() {
   return (

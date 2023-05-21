@@ -1,9 +1,9 @@
 "use client";
 
+import { TypographyLarge, TypographyMuted } from "@/components/Typography";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { TypographyLarge, TypographyMuted } from "./Typography";
 
 export default function Experience() {
   return (

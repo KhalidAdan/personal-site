@@ -1,4 +1,5 @@
 import { TypographyMuted } from "@/components/Typography";
+import SiteHeader from "@/components/common/SiteHeader";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,11 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="w-full">
           <div className="container max-w-[512px] h-full pt-8 pb-10 px-4">
-            <div className="pb-8">
-              <a href="/">
-                <TypographyMuted>KHLD.DEV</TypographyMuted>
-              </a>
-            </div>
+            <SiteHeader />
             {children}
           </div>
         </main>

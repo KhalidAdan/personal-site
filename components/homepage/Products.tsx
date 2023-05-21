@@ -1,9 +1,9 @@
 "use client";
 
+import { TypographyLarge, TypographyMutedP } from "@/components/Typography";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { TypographyLarge, TypographyMutedP } from "./Typography";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export default function Products() {
   return (
@@ -24,7 +24,7 @@ export default function Products() {
         <ul className="flex flex-col gap-1">
           <li>
             <Link
-              className="flex gap-4 items-start px-6 py-4 hover:bg-light/5 rounded-md cursor-pointer"
+              className="flex gap-4 items-start px-6 py-4 hover:bg-light/20 rounded-md cursor-pointer"
               href="https://eto.news"
               target="_blank"
             >
