@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="text-light w-full">
+        <main className="w-full">
           <div className="container max-w-[512px] h-full pt-8 pb-10 px-4">
             <div className="pb-8">
               <a href="/">
