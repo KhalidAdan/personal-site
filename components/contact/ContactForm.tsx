@@ -8,24 +8,24 @@ import { Mail } from "lucide-react";
 
 export default function ContactForm({ variants }: { variants: Variants }) {
   return (
-    <motion.div variants={variants} className="flex gap-7">
+    <motion.div variants={variants} className="flex gap-7 mt-6">
       <form name="contact-form" className="w-full">
         <div className="flex gap-4">
           <Input
-            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none"
+            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none motion-safe:focus:animate-pulse"
             type="name"
             placeholder="Name"
             required
           />
           <Input
-            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none"
+            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none motion-safe:focus:animate-pulse"
             type="email"
             placeholder="Email"
             required
           />
         </div>
         <Textarea
-          className="mt-4 dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none resize-none"
+          className="mt-4 dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none resize-none motion-safe:focus:animate-pulse"
           placeholder="Type your message here."
           rows={6}
           required

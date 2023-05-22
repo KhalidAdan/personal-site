@@ -24,7 +24,7 @@ export default function RootLayout({
             {children}
           </div>
         </main>
-        <div className="flex justify-center pt-8 pb-6">
+        <div className="flex justify-center pt-8 pb-6 bottom-0">
           <TypographyMuted>
             {" "}
             &#169; KHLD.DEV {new Date().getFullYear()}.
