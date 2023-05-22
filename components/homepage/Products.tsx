@@ -2,20 +2,12 @@
 
 import { TypographyLarge, TypographyMutedP } from "@/components/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import Link from "next/link";
 
-export default function Products() {
+export default function Products({ variants }: { variants: Variants }) {
   return (
-    <motion.div
-      className="flex flex-col mb-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{ delay: 0.8, duration: 0.5, ease: "easeOut" }}
-    >
+    <motion.div variants={variants} className="flex flex-col mb-4">
       <div className="flex justify-between mt-16 mb-4">
         <TypographyLarge>Products</TypographyLarge>
       </div>

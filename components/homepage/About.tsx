@@ -1,19 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { TypographyH3, TypographyLead } from "../Typography";
 
-export default function About() {
+export default function About({ variants }: { variants: Variants }) {
   return (
-    <motion.div
-      className="flex flex-col gap-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
-    >
+    <motion.div variants={variants} className="flex flex-col gap-4">
       <TypographyH3>
         I help humans build software that solves problems.
       </TypographyH3>

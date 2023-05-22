@@ -2,22 +2,15 @@
 
 import { TypographyLarge } from "@/components/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { TooltipHelper } from "../TooltipHelper";
 
-export default function FavouriteTech() {
+export default function FavouriteTech({ variants }: { variants: Variants }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
-    >
+    <motion.div variants={variants} className="mt-8 mb-4">
       <TypographyLarge>Favourite technologies</TypographyLarge>
 
-      <div className="grid grid-cols-4 md:grid-cols-6 mt-4 md:gap-x-8 gap-y-6">
+      <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-6">
         <TooltipHelper title="Next.js">
           <Avatar className="h-14 w-14 dark:bg-white rounded-full dark:border dark:border-white">
             <AvatarImage src="/next.svg" alt="Next.js" />

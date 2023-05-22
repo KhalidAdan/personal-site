@@ -1,21 +1,13 @@
 "use client";
 
 import { TypographyLarge, TypographyMuted } from "@/components/Typography";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function Experience() {
+export default function Experience({ variants }: { variants: Variants }) {
   return (
-    <motion.div
-      className="flex justify-between mt-16 mb-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-    >
+    <motion.div variants={variants} className="flex justify-between mt-8 mb-4">
       <TypographyLarge>My experience</TypographyLarge>
       <Link href="/resume">
         <TypographyMuted>
