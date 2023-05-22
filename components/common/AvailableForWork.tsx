@@ -15,10 +15,11 @@ export default function AvailableForWork({
 }) {
   return (
     <motion.div variants={variants}>
-      <div className="flex items-center gap-1">
-        <svg className="w-4 h-4">
-          <circle cx="7" cy="9" r="6" fill="green" />
-        </svg>
+      <div className="flex items-end gap-1">
+        <span className="relative flex h-3 w-3 mr-1">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+        </span>
         <TypographySmall>Available for new opportunities</TypographySmall>
       </div>
       {contactMe && (

@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Products({ variants }: { variants: Variants }) {
   return (
     <motion.div variants={variants} className="flex flex-col mb-4">
-      <div className="flex justify-between mt-16 mb-4">
+      <div className="flex justify-between mt-10">
         <TypographyLarge>Products</TypographyLarge>
       </div>
 
@@ -30,10 +30,7 @@ export default function Products({ variants }: { variants: Variants }) {
               </div>
               <div>
                 <TypographyLarge>Eto</TypographyLarge>
-                <TypographyMutedP>
-                  An AI product that helps you stay up to date with the latest
-                  news, without the noise. Currently on hiatus.
-                </TypographyMutedP>
+                <TypographyMutedP>An AI news product.</TypographyMutedP>
               </div>
             </Link>
           </li>
@@ -53,8 +50,7 @@ export default function Products({ variants }: { variants: Variants }) {
               <div>
                 <TypographyLarge>Skillbox</TypographyLarge>
                 <TypographyMutedP>
-                  Skillbox is a corporate learning tool that helps companies
-                  build a culture of learning.
+                  A platform for building a culture of learning.
                 </TypographyMutedP>
               </div>
             </Link>

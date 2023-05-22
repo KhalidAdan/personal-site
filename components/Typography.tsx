@@ -1,8 +1,8 @@
-export function TypographyH3({ children }: { children: React.ReactNode }) {
+export function TypographyH1({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-8">
       {children}
-    </h3>
+    </h1>
   );
 }
 
@@ -14,38 +14,28 @@ export function TypographyH2({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function TypographyH1({ children }: { children: React.ReactNode }) {
+export function TypographyH3({ children }: { children: React.ReactNode }) {
   return (
-    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
       {children}
-    </h1>
+    </h3>
   );
 }
 
 export function TypographyH4({ children }: { children: React.ReactNode }) {
   return (
-    <h1 className="scroll-m-20 text-xl font-semibold tracking-tight">
+    <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
       {children}
-    </h1>
+    </h4>
   );
 }
 
 export function TypographyP({ children }: { children: React.ReactNode }) {
-  return <h1 className="leading-7 [&:not(:first-child)]:mt-6">{children}</h1>;
+  return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
 }
 
 export function TypographyMutedP({ children }: { children: React.ReactNode }) {
-  return <h1 className="text-muted-foreground leading-7">{children}</h1>;
-}
-
-export function TypographyList({ children }: { children: React.ReactNode[] }) {
-  return (
-    <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-      {children.map((child, index) => (
-        <li key={index}>{child}</li>
-      ))}
-    </ul>
-  );
+  return <p className="text-muted-foreground leading-7">{children}</p>;
 }
 
 export function TypographyLead({ children }: { children: React.ReactNode }) {
@@ -53,7 +43,7 @@ export function TypographyLead({ children }: { children: React.ReactNode }) {
 }
 
 export function TypographyLarge({ children }: { children: React.ReactNode }) {
-  return <div className="text-lg font-semibold">{children}</div>;
+  return <p className="text-lg font-semibold">{children}</p>;
 }
 
 export function TypographySmall({ children }: { children: React.ReactNode }) {

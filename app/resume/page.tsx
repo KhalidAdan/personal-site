@@ -1,23 +1,34 @@
-import { TypographyLarge, TypographyMutedP } from "@/components/Typography";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { TypographyMuted, TypographyP } from "@/components/Typography";
 
 export default function Page() {
   return (
     <div>
-      <div className="flex gap-4">
-        <div>
-          <Avatar className="h-20 w-20">
-            <AvatarImage src="/smallUI.jpg" alt="Khalid!" />
-            <AvatarFallback>KA</AvatarFallback>
-          </Avatar>
-        </div>
-        <div>
-          <TypographyLarge>Khalid Adan</TypographyLarge>
-          <TypographyMutedP>
-            Senior software developer and Next.js enthusiast!
-          </TypographyMutedP>
-        </div>
-      </div>
+      <ul>
+        <li className="mb-6">
+          <div className="flex justify-between pb-2 items-center">
+            <TypographyP>Frontend Lead Software Developer, HP</TypographyP>
+            <TypographyMuted>March 2022 - Present</TypographyMuted>
+          </div>
+        </li>
+        <li className="mb-6">
+          <div className="flex justify-between pb-2 items-center">
+            <TypographyP>Senior React developer, Deloitte</TypographyP>
+            <TypographyMuted>November 2021 - March 2022</TypographyMuted>
+          </div>
+        </li>
+        <li className="mb-6">
+          <div className="flex justify-between pb-2 items-center">
+            <TypographyP>Fullstack software engineer, Gadget</TypographyP>
+            <TypographyMuted>October 2020 - October 2021</TypographyMuted>
+          </div>
+        </li>
+        <li className="mb-6">
+          <div className="flex justify-between pb-2 items-center">
+            <TypographyP>Canada</TypographyP>
+            <TypographyMuted>October 2020 - October 2021</TypographyMuted>
+          </div>
+        </li>
+      </ul>
     </div>
   );
 }
