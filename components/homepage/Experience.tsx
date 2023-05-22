@@ -18,10 +18,10 @@ export default function Experience({ variants }: { variants: Variants }) {
         </Link> */}
       </div>
       <TypographyMutedP>
-        I've worked with a variety of large entreprise clients as a contractor
-        and as a full-time engineer with startups and in the public sector. I've
-        worked across the stack, and lead backend and frotend teams and in
-        multiple different stacks and languages.
+        I&apos;ve worked with a variety of large entreprise clients as a
+        contractor and as a full-time engineer with startups and in the public
+        sector. I&apos;ve worked across the stack, and lead backend and frotend
+        teams and in multiple different stacks and languages.
       </TypographyMutedP>
     </motion.div>
   );
