@@ -1,11 +1,12 @@
 "use client";
 
-import { Variants, motion } from "framer-motion";
+import { Variants } from "framer-motion";
 import { TypographyH1, TypographyLead } from "../Typography";
+import { AnimatedSection } from "../ui/section";
 
 export default function About({ variants }: { variants: Variants }) {
   return (
-    <motion.div variants={variants} className="flex flex-col gap-4">
+    <AnimatedSection variants={variants} className="mt-0">
       <TypographyH1>
         I help humans build software that solves problems.
       </TypographyH1>
@@ -15,6 +16,6 @@ export default function About({ variants }: { variants: Variants }) {
         huge enterprises and the public sector. Currently, I&apos;m hacking on a
         product called Skillbox, and hope to show something soon!
       </TypographyLead>
-    </motion.div>
+    </AnimatedSection>
   );
 }

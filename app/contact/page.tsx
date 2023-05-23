@@ -5,7 +5,8 @@ import Header from "@/components/common/Header";
 import AverageResponseTime from "@/components/contact/AverageResponseTime";
 import ContactCTA from "@/components/contact/ContactCTA";
 import ContactForm from "@/components/contact/ContactForm";
-import { Variants, motion } from "framer-motion";
+import { AnimatedSection } from "@/components/ui/section";
+import { Variants } from "framer-motion";
 
 const slideInXAxis: Variants = {
   hidden: {
@@ -37,17 +38,17 @@ const childVariants: Variants = {
 
 export default function Contact() {
   return (
-    <motion.div variants={slideInXAxis} initial="hidden" animate="visible">
+    <AnimatedSection
+      variants={slideInXAxis}
+      initial="hidden"
+      animate="visible"
+      className="mt-0"
+    >
       <Header variants={childVariants} />
-
-      <div className="flex flex-col pt-6 gap-6">
-        <ContactCTA variants={childVariants} />
-
-        <AvailableForWork variants={childVariants} contactMe={false} />
-
-        <ContactForm variants={childVariants} />
-        <AverageResponseTime variants={childVariants} />
-      </div>
-    </motion.div>
+      <ContactCTA variants={childVariants} />
+      <AvailableForWork variants={childVariants} contactMe={false} />
+      <ContactForm variants={childVariants} />
+      <AverageResponseTime variants={childVariants} />
+    </AnimatedSection>
   );
 }

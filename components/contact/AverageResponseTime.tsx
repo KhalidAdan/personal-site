@@ -8,7 +8,7 @@ export default function AverageResponseTime({
   variants: Variants;
 }) {
   return (
-    <motion.div variants={variants} className="flex gap-4">
+    <motion.div variants={variants} className="flex gap-4 mt-4">
       <TypographySmall>
         <span className="flex items-center">
           <Clock className="mr-2 h-5 w-5" />

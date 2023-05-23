@@ -2,21 +2,22 @@
 
 import { TypographyLarge, TypographyMutedP } from "@/components/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Variants, motion } from "framer-motion";
+import { Variants } from "framer-motion";
 import Link from "next/link";
+import { AnimatedSection } from "../ui/section";
 
 export default function Products({ variants }: { variants: Variants }) {
   return (
-    <motion.div variants={variants} className="flex flex-col mb-4">
-      <div className="flex justify-between mt-10">
+    <AnimatedSection variants={variants}>
+      <div className="flex justify-between">
         <TypographyLarge>Products</TypographyLarge>
       </div>
 
       <div>
-        <ul className="flex flex-col gap-1">
+        <ul className="flex flex-col gap- mt-2">
           <li>
             <Link
-              className="flex gap-4 items-start px-6 py-4 hover:bg-light/20 rounded-md cursor-pointer"
+              className="flex gap-4 items-start px-6 py-4 hover:bg-light/20 rounded-lg cursor-pointer"
               href="https://eto.news"
               target="_blank"
             >
@@ -36,7 +37,7 @@ export default function Products({ variants }: { variants: Variants }) {
           </li>
           <li>
             <Link
-              className="flex gap-4 items-start px-6 py-4 hover:bg-light/5 rounded-md cursor-pointer"
+              className="flex gap-4 items-start px-6 py-4 hover:bg-light/20 rounded-lg cursor-pointer"
               href="#"
             >
               <div>
@@ -57,6 +58,6 @@ export default function Products({ variants }: { variants: Variants }) {
           </li>
         </ul>
       </div>
-    </motion.div>
+    </AnimatedSection>
   );
 }

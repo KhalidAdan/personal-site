@@ -6,8 +6,9 @@ import About from "@/components/homepage/About";
 import Experience from "@/components/homepage/Experience";
 import FavouriteTech from "@/components/homepage/FavouriteTech";
 import Products from "@/components/homepage/Products";
+import { AnimatedSection } from "@/components/ui/section";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Variants, motion } from "framer-motion";
+import { Variants } from "framer-motion";
 
 const availableForWork = true;
 
@@ -43,9 +44,14 @@ export default function Home() {
   return (
     <>
       <TooltipProvider>
-        <motion.div variants={fadeInYAxis} initial="hidden" animate="visible">
+        <AnimatedSection
+          variants={fadeInYAxis}
+          initial="hidden"
+          animate="visible"
+          className="mt-0"
+        >
           <Header variants={childVariants} />
-          <div className="flex flex-col gap-7 pt-8">
+          <div className="flex flex-col gap-6 pt-8">
             <About variants={childVariants} />
             {availableForWork && (
               <AvailableForWork variants={childVariants} contactMe />
@@ -54,7 +60,7 @@ export default function Home() {
           <Products variants={childVariants} />
           <Experience variants={childVariants} />
           <FavouriteTech variants={childVariants} />
-        </motion.div>
+        </AnimatedSection>
       </TooltipProvider>
     </>
   );

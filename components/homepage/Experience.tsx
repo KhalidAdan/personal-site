@@ -1,12 +1,13 @@
 "use client";
 
 import { TypographyLarge, TypographyMutedP } from "@/components/Typography";
-import { Variants, motion } from "framer-motion";
+import { Variants } from "framer-motion";
+import { AnimatedSection } from "../ui/section";
 
 export default function Experience({ variants }: { variants: Variants }) {
   return (
-    <motion.div variants={variants} className="flex flex-col gap-6">
-      <div className="flex justify-between mt-8 w-full">
+    <AnimatedSection variants={variants}>
+      <div className="flex justify-between w-full mb-2">
         <TypographyLarge>My experience</TypographyLarge>
         {/* <Link href="/resume">
           <TypographyMuted>
@@ -23,6 +24,6 @@ export default function Experience({ variants }: { variants: Variants }) {
         sector. I&apos;ve worked across the stack, and lead backend and frotend
         teams and in multiple different stacks and languages.
       </TypographyMutedP>
-    </motion.div>
+    </AnimatedSection>
   );
 }

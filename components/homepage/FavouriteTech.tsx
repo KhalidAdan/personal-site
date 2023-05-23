@@ -2,15 +2,16 @@
 
 import { TypographyLarge } from "@/components/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Variants, motion } from "framer-motion";
+import { Variants } from "framer-motion";
 import { TooltipHelper } from "../TooltipHelper";
+import { AnimatedSection } from "../ui/section";
 
 export default function FavouriteTech({ variants }: { variants: Variants }) {
   return (
-    <motion.div variants={variants} className="mt-8 mb-4">
+    <AnimatedSection variants={variants} className="mt-8 mb-4">
       <TypographyLarge>Favourite technologies</TypographyLarge>
 
-      <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-6">
+      <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-4">
         <TooltipHelper title="Next.js">
           <Avatar className="h-14 w-14 dark:bg-white rounded-full dark:border dark:border-white">
             <AvatarImage src="/next.svg" alt="Next.js" />
@@ -22,6 +23,15 @@ export default function FavouriteTech({ variants }: { variants: Variants }) {
           <Avatar className="h-14 w-14">
             <AvatarImage src="/react.svg" alt="React" />
             <AvatarFallback className="bg-accent-gray ">React</AvatarFallback>
+          </Avatar>
+        </TooltipHelper>
+
+        <TooltipHelper title="Typescript">
+          <Avatar className="h-14 w-14 bg-black rounded-lg">
+            <AvatarImage src="/ts.svg" alt="Typescript" />
+            <AvatarFallback className="bg-accent-gray ">
+              Typescript
+            </AvatarFallback>
           </Avatar>
         </TooltipHelper>
 
@@ -70,7 +80,25 @@ export default function FavouriteTech({ variants }: { variants: Variants }) {
             <AvatarFallback className="bg-accent-gray ">Python</AvatarFallback>
           </Avatar>
         </TooltipHelper>
+
+        <TooltipHelper title="React Email">
+          <Avatar className="h-14 w-14 bg-black">
+            <AvatarImage src="/react-email.svg" alt="React Email" />
+            <AvatarFallback className="bg-accent-gray ">
+              React Email
+            </AvatarFallback>
+          </Avatar>
+        </TooltipHelper>
+
+        <TooltipHelper title="Postmark">
+          <Avatar className="h-14 w-14 bg-black">
+            <AvatarImage src="/postmark.bmp" alt="Postmark" />
+            <AvatarFallback className="bg-accent-gray ">
+              Postmark
+            </AvatarFallback>
+          </Avatar>
+        </TooltipHelper>
       </div>
-    </motion.div>
+    </AnimatedSection>
   );
 }
