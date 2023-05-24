@@ -2,10 +2,6 @@ import { clsx, type ClassValue } from "clsx";
 import { Variants } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
-type Animations = "fadeInFromBottom" | "slideInFromLeft";
-
-type AnimationVariants = Record<Animations, Variants>;
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -14,6 +10,10 @@ export function getRandomValueFromArray<T extends any>(array: T[]): T {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
+
+type Animations = "fadeInFromBottom" | "slideInFromLeft";
+
+type AnimationVariants = Record<Animations, Variants>;
 
 export function getAnimationVariants(name: keyof AnimationVariants): Variants {
   return animationVariants[name];

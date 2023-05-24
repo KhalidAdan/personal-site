@@ -51,7 +51,7 @@ export default function ContactForm({ variants }: ContactFormProps) {
             Name
           </label>
           <Input
-            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none placeholder-shown:motion-safe:focus:animate-pulse"
+            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 bg-accent-gray/10 border-none dark:placeholder-shown:motion-safe:focus:animate-pulse"
             placeholder="Name"
             {...register("name", { required: true })}
           />
@@ -61,7 +61,7 @@ export default function ContactForm({ variants }: ContactFormProps) {
             E-mail
           </label>
           <Input
-            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none placeholder-shown:motion-safe:focus:animate-pulse"
+            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 bg-accent-gray/10 border-none dark:placeholder-shown:motion-safe:focus:animate-pulse"
             placeholder="Email"
             type="email"
             {...register("email", { required: true })}
@@ -69,14 +69,13 @@ export default function ContactForm({ variants }: ContactFormProps) {
         </div>
       </div>
       <Textarea
-        className="mt-4 dark:bg-accent-gray/50 dark:placeholder:text-light/50 border-none resize-none placeholder-shown:motion-safe:focus:animate-pulse"
+        className="mt-4 dark:bg-accent-gray/50 dark:placeholder:text-light/50 bg-accent-gray/10 border-none resize-none dark:placeholder-shown:motion-safe:focus:animate-pulse"
         placeholder="Type your message here."
         rows={6}
         {...register("message", { required: true })}
       />
       <Button
-        className="flex gap-2 items-center mt-4 w-full"
-        variant="secondary"
+        className="flex gap-2 items-center mt-4 w-full bg-primary dark:bg-white dark:text-black"
         type="submit"
         disabled={isSending}
       >

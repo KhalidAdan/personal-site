@@ -19,6 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="w-full">
+          <p className="hidden md:block absolute px-3 py-1.5 bg-dark/10 dark:bg-light/10 rounded-lg m-4 italic">
+            This site is a work in progress!
+          </p>
           <section className="flex flex-col sm:flex-row container max-w-[662px] h-full pt-8 pb-10 px-4 w-full">
             <Nav />
             <div className="flex flex-col ml-4">{children}</div>
