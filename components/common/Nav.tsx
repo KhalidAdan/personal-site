@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { TypographySmall } from "../Typography";
 
 type Tab = { id: string; label: string; pathname: string }[];
 
@@ -10,30 +11,42 @@ let tabs: Tab = [
   { id: "home", label: "khld.dev", pathname: "/" },
   { id: "contact", label: "Contact", pathname: "/contact" },
   { id: "blog", label: "Blog", pathname: "/blog" },
-  { id: "resume", label: "Experience", pathname: "/resume" },
+  // { id: "resume", label: "Experience", pathname: "/resume" },
+  { id: "stack", label: "Stack", pathname: "/stack" },
 ];
 
 export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <aside className="sm:w-[150px] sm:mt-64 pt-2 mb-4 text-left">
+    <motion.aside
+      className="sm:min-w-[150px] sm:mt-64 pt-2 mb-4 text-left"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <nav>
-        <div className="flex sm:flex-col justify-between">
+        <motion.div className="flex space-x-1 sm:flex-col justify-between">
           {tabs.map((tab) => (
             <Link
               href={tab.pathname}
               key={tab.id}
-              className={cn(
-                pathname == tab.pathname ? "bg-light/10" : "",
-                "opacity-50 hover:opacity-100 font-medium uppercase px-4 py-2 rounded-xl text-left text-sm transition-all max-w-min"
-              )}
+              className={`relative px-3 py-1.5 font-medium transition max-w-min uppercase`}
+              style={{
+                WebkitTapHighlightColor: "transparent",
+              }}
             >
-              {tab.label}
+              {pathname == tab.pathname && (
+                <motion.span
+                  layoutId="bubble"
+                  className="absolute inset-0 z-10 bg-dark/10 dark:bg-light/10 mix-blend-difference rounded-xl"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+              <TypographySmall>{tab.label}</TypographySmall>
             </Link>
           ))}
-        </div>
+        </motion.div>
       </nav>
-    </aside>
+    </motion.aside>
   );
 }
