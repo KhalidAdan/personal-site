@@ -8,7 +8,7 @@ const Div = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("flex flex-col mt-10", className)} {...props} />
+  <div ref={ref} className={cn("flex flex-col mt-12", className)} {...props} />
 ));
 Div.displayName = "Section";
 

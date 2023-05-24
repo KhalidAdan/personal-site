@@ -1,10 +1,9 @@
-"use client";
-
 import { TypographySmall } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
-import { Variants, motion } from "framer-motion";
+import { Variants } from "framer-motion";
 import { Mail } from "lucide-react";
 import Link from "next/link";
+import { AnimatedSection } from "../ui/section";
 
 export default function AvailableForWork({
   variants,
@@ -14,7 +13,7 @@ export default function AvailableForWork({
   contactMe: boolean;
 }) {
   return (
-    <motion.div variants={variants}>
+    <AnimatedSection variants={variants} className="mt-0">
       <div className="flex items-end gap-1">
         <span className="relative flex h-3 w-3 mr-1">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -31,6 +30,6 @@ export default function AvailableForWork({
           </Link>
         </div>
       )}
-    </motion.div>
+    </AnimatedSection>
   );
 }

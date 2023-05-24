@@ -1,5 +1,3 @@
-"use client";
-
 import { TypographyLarge, TypographyMutedP } from "@/components/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Variants, motion } from "framer-motion";

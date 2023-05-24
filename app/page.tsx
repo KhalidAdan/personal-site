@@ -5,47 +5,27 @@ import Header from "@/components/common/Header";
 import About from "@/components/homepage/About";
 import Experience from "@/components/homepage/Experience";
 import FavouriteTech from "@/components/homepage/FavouriteTech";
-import Products from "@/components/homepage/Products";
+import ProductsList from "@/components/homepage/ProductsList";
 import { AnimatedSection } from "@/components/ui/section";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
 
 const availableForWork = true;
-
-const fadeInYAxis: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 0.3,
-    },
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      bounce: 0,
-      duration: 0.7,
-      delayChildren: 0.2,
-      staggerChildren: 0.1,
-    },
-  },
-};
 
 const childVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
+const animation = getAnimationVariants("fadeInFromBottom");
+
 export default function Home() {
   return (
     <>
       <TooltipProvider>
         <AnimatedSection
-          variants={fadeInYAxis}
+          variants={animation}
           initial="hidden"
           animate="visible"
           className="mt-0"
@@ -57,7 +37,7 @@ export default function Home() {
               <AvailableForWork variants={childVariants} contactMe />
             )}
           </div>
-          <Products variants={childVariants} />
+          <ProductsList variants={childVariants} />
           <Experience variants={childVariants} />
           <FavouriteTech variants={childVariants} />
         </AnimatedSection>

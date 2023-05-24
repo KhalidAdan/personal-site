@@ -1,5 +1,5 @@
 import { TypographyMuted } from "@/components/Typography";
-import SiteHeader from "@/components/common/SiteHeader";
+import Nav from "@/components/common/Nav";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="w-full">
-          <div className="container max-w-[512px] h-full pt-8 pb-10 px-4">
-            <SiteHeader />
-            {children}
-          </div>
+          <section className="flex flex-col sm:flex-row container max-w-[662px] h-full pt-8 pb-10 px-4 w-full">
+            <Nav />
+            <div className="flex flex-col ml-4">{children}</div>
+          </section>
         </main>
         <div className="flex justify-center pt-8 pb-6 bottom-0">
           <TypographyMuted>

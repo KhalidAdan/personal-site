@@ -17,6 +17,7 @@ export async function POST(req: Request) {
 
   const client = new Client(token);
 
+  // cannot update the values for from and to until postmark tells me I'm verified
   const response = await client.sendEmail({
     From: "admin@eto.news",
     To: "admin@eto.news",

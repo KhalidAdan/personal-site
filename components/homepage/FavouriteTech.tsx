@@ -1,5 +1,3 @@
-"use client";
-
 import { TypographyLarge } from "@/components/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Variants } from "framer-motion";
@@ -8,7 +6,7 @@ import { AnimatedSection } from "../ui/section";
 
 export default function FavouriteTech({ variants }: { variants: Variants }) {
   return (
-    <AnimatedSection variants={variants} className="mt-8 mb-4">
+    <AnimatedSection variants={variants}>
       <TypographyLarge>Favourite technologies</TypographyLarge>
 
       <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-4">
