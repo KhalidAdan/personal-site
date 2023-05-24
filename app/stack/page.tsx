@@ -28,9 +28,9 @@ export default function Stack() {
         <motion.div variants={childVariants} className="mt-10 mb-6">
           <TypographyH1> Stack</TypographyH1>
           <TypographyLead>
-            Below you'll find a list of technologies I am currently infatuated
-            with. I am always looking to learn new things, so this list is
-            subject to change rapidly!
+            Below you&apos;ll find a list of technologies I am currently
+            infatuated with. I am always looking to learn new things, so this
+            list is subject to change rapidly!
           </TypographyLead>
         </motion.div>
         <FavouriteTech variants={childVariants} />

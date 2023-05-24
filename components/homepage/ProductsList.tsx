@@ -20,7 +20,7 @@ const products: Product[] = [
   {
     name: "Skillbox",
     description: "A platform for building a culture of learning.",
-    image: "/skillbox-logo.png",
+    image: "/sb.svg",
     href: "https://skillbox.so",
   },
 ];
