@@ -96,6 +96,15 @@ export default function FavouriteTech({ variants }: { variants: Variants }) {
             </AvatarFallback>
           </Avatar>
         </TooltipHelper>
+
+        <TooltipHelper title="shadcn/ui">
+          <Avatar className="h-14 w-14 bg-black dark:bg-white rounded-full dark:border dark:border-white">
+            <AvatarImage src="/ui.shad.svg" alt="UI by shad.cn" />
+            <AvatarFallback className="bg-black text-white text-xl">
+              UI
+            </AvatarFallback>
+          </Avatar>
+        </TooltipHelper>
       </div>
     </AnimatedSection>
   );

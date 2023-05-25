@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import AvailableForWork from "@/components/common/AvailableForWork";
 import Header from "@/components/common/Header";
 import AverageResponseTime from "@/components/contact/AverageResponseTime";
@@ -29,6 +30,7 @@ export default function Contact() {
       <AvailableForWork variants={childVariants} contactMe={false} />
       <ContactForm variants={childVariants} />
       <AverageResponseTime variants={childVariants} />
+      <AnimatedTurbulence />
     </AnimatedSection>
   );
 }

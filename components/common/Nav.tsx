@@ -5,9 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TypographySmall } from "../Typography";
 
-type Tab = { id: string; label: string; pathname: string }[];
+type Tab = { id: string; label: string; pathname: string };
+type Tabs = Tab[];
 
-let tabs: Tab = [
+let tabs: Tabs = [
   { id: "home", label: "Home", pathname: "/" },
   { id: "contact", label: "Contact", pathname: "/contact" },
   { id: "blog", label: "Blog", pathname: "/blog" },
@@ -25,26 +26,32 @@ export default function Nav() {
       animate={{ opacity: 1 }}
     >
       <nav>
-        <motion.div className="flex space-x-1 sm:flex-col justify-between">
-          {tabs.map((tab) => (
-            <Link
-              href={tab.pathname}
-              key={tab.id}
-              className={`relative px-3 py-1.5 font-medium transition max-w-min uppercase`}
-              style={{
-                WebkitTapHighlightColor: "transparent",
-              }}
-            >
-              {pathname == tab.pathname && (
-                <motion.span
-                  layoutId="nav-bubble"
-                  className="absolute inset-0 z-10 bg-dark/10 dark:bg-light/10 mix-blend-difference rounded-lg"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                />
-              )}
-              <TypographySmall>{tab.label}</TypographySmall>
-            </Link>
-          ))}
+        <motion.div className="flex sm:flex-col justify-between">
+          {tabs.map((tab) => {
+            let activeTab = tab.pathname === pathname;
+            if (!activeTab && tab.pathname !== "/") {
+              activeTab = pathname.includes(tab.pathname);
+            }
+            return (
+              <Link
+                href={tab.pathname}
+                key={tab.id}
+                className={`relative px-3 py-1.5 font-medium transition max-w-min uppercase ml-0`}
+                style={{
+                  WebkitTapHighlightColor: "transparent",
+                }}
+              >
+                {activeTab && (
+                  <motion.span
+                    layoutId="nav-bubble"
+                    className="absolute inset-0 z-10 bg-dark/10 dark:bg-light/10 mix-blend-difference rounded-lg"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <TypographySmall>{tab.label}</TypographySmall>
+              </Link>
+            );
+          })}
         </motion.div>
       </nav>
     </motion.aside>
