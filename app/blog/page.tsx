@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { AnimatedSection } from "@/components/ui/section";
 import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
-import Image from "next/image";
 
 const animation = getAnimationVariants("fadeInFromBottom");
 
@@ -91,7 +90,7 @@ export default function BlogList() {
         >
           <article
             key={post.id}
-            className="flex max-w-xl flex-col items-start justify-between pb-4 -mx-5 px-5 py-3.5 rounded-xl hover:bg-light/10"
+            className="flex max-w-xl flex-col items-start justify-between pb-4 sm:-mx-5 px-5 py-3.5 rounded-xl hover:bg-light/10"
           >
             <a href={`blog/${post.id}`}>
               <div className="flex items-center gap-x-3.5 text-xs">
@@ -103,7 +102,7 @@ export default function BlogList() {
                 ))}
               </div>
               {post.image && (
-                <Image
+                <img
                   src={post.image}
                   alt=""
                   className="w-full mt-4 h-64 object-cover object-center rounded-lg shadow-md"

@@ -24,7 +24,7 @@ export default function RootLayout({
           </p>
           <section className="flex flex-col sm:flex-row container max-w-[662px] h-full pt-8 pb-10 px-4 w-full">
             <Nav />
-            <div className="flex flex-col ml-4">{children}</div>
+            <div className="flex flex-col">{children}</div>
           </section>
         </main>
         <div className="flex justify-center pt-8 pb-6 bottom-0">

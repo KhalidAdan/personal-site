@@ -14,7 +14,7 @@ export default function Header({ variants }: { variants: Variants }) {
       <div>
         <TypographyLarge>Khalid Adan</TypographyLarge>
         <TypographyMutedP>
-          Senior software developer and Next.js enthusiast!
+          Senior software developer and science fiction nerd!
         </TypographyMutedP>
       </div>
     </motion.div>

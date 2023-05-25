@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function AnimatedTurbulence() {
   return (
     <svg
@@ -22,19 +18,20 @@ export default function AnimatedTurbulence() {
           primitiveUnits="userSpaceOnUse"
           colorInterpolationFilters="linearRGB"
         >
-          <motion.feTurbulence
+          <feTurbulence
             type="fractalNoise"
             stitchTiles="stitch"
             result="turbulence"
-            initial={{ baseFrequency: 0.1, numOctaves: 1, seed: 1 }}
-            animate={{ baseFrequency: 0.65, numOctaves: 4, seed: 15 }}
-            transition={{
-              type: "tween",
-              mass: 0.5,
-              duration: 100,
-              repeat: Infinity,
-            }}
-          ></motion.feTurbulence>
+            numOctaves={1}
+            seed={0}
+          >
+            <animate
+              attributeName="baseFrequency"
+              dur="60s"
+              values="0.3;0.65"
+              repeatCount="indefinite"
+            />
+          </feTurbulence>
           <feSpecularLighting
             surfaceScale="15"
             specularConstant="0.6"
