@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import AvailableForWork from "@/components/common/AvailableForWork";
 import Header from "@/components/common/Header";
 import About from "@/components/homepage/About";
@@ -35,6 +36,7 @@ export default function Home() {
       <ProductsList variants={childVariants} />
       {/* <Experience variants={childVariants} />
           <FavouriteTech variants={childVariants} /> */}
+      <AnimatedTurbulence />
     </AnimatedSection>
   );
 }

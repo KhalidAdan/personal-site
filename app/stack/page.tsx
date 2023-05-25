@@ -1,6 +1,7 @@
 "use client";
 
 import { TypographyH1, TypographyLead } from "@/components/Typography";
+import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import Header from "@/components/common/Header";
 import FavouriteTech from "@/components/homepage/FavouriteTech";
 import { AnimatedSection } from "@/components/ui/section";
@@ -26,7 +27,7 @@ export default function Stack() {
       <TooltipProvider>
         <Header variants={childVariants} />
         <motion.div variants={childVariants} className="mt-10 mb-6">
-          <TypographyH1> Stack</TypographyH1>
+          <TypographyH1>Stack</TypographyH1>
           <TypographyLead>
             Below you&apos;ll find a list of technologies I am currently
             infatuated with. I am always looking to learn new things, so this
@@ -35,6 +36,7 @@ export default function Stack() {
         </motion.div>
         <FavouriteTech variants={childVariants} />
       </TooltipProvider>
+      <AnimatedTurbulence />
     </AnimatedSection>
   );
 }
