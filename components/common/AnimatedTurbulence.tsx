@@ -1,27 +1,22 @@
+// ISSUES:
+// Safari :(
+
 export default function AnimatedTurbulence() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="100%"
-      height="100%"
-      opacity="0.4"
-      className="absolute top-0 left-0 z-[-1]"
+      opacity="0.45"
+      className="h-0 motion-reduce:hidden pointer-events-none"
     >
       <defs>
-        <filter
-          id="nnnoise-filter"
-          width="140%"
-          height="140%"
-          filterUnits="objectBoundingBox"
-          primitiveUnits="userSpaceOnUse"
-          colorInterpolationFilters="linearRGB"
-        >
+        <filter id="space-filter">
           <feTurbulence
             type="fractalNoise"
             stitchTiles="stitch"
             result="turbulence"
+            baseFrequency={0.3}
             numOctaves={1}
             seed={0}
           >
@@ -36,7 +31,6 @@ export default function AnimatedTurbulence() {
             surfaceScale="15"
             specularConstant="0.6"
             specularExponent="20"
-            lightingColor="#d3d0d6"
             in="turbulence"
             result="specularLighting"
           >
@@ -44,8 +38,6 @@ export default function AnimatedTurbulence() {
           </feSpecularLighting>
         </filter>
       </defs>
-      <rect width="100%" height="100%" fill="transparent"></rect>
-      <rect width="100%" height="100%" filter="url(#nnnoise-filter)"></rect>
     </svg>
   );
 }

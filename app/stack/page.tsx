@@ -1,7 +1,6 @@
 "use client";
 
 import { TypographyH1, TypographyLead } from "@/components/Typography";
-import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import Header from "@/components/common/Header";
 import FavouriteTech from "@/components/homepage/FavouriteTech";
 import { AnimatedSection } from "@/components/ui/section";
@@ -36,7 +35,6 @@ export default function Stack() {
         </motion.div>
         <FavouriteTech variants={childVariants} />
       </TooltipProvider>
-      <AnimatedTurbulence />
     </AnimatedSection>
   );
 }

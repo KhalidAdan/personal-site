@@ -16,6 +16,26 @@
   }
 }
 
+/* html {
+  position: relative;
+}
+
+body::before,
+body::after {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  content: "";
+  opacity: 0.4;
+}
+
+body::before {
+  filter: url(#space-filter);
+} */
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

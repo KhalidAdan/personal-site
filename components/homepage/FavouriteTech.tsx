@@ -6,7 +6,7 @@ import { AnimatedSection } from "../ui/section";
 
 export default function FavouriteTech({ variants }: { variants: Variants }) {
   return (
-    <AnimatedSection variants={variants} className="mt-0">
+    <AnimatedSection variants={variants}>
       <TypographyLarge>Favourite technologies</TypographyLarge>
 
       <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-4">

@@ -1,6 +1,7 @@
 import ContactEmail from "@/emails";
 import { env } from "@/env";
 import { render } from "@react-email/render";
+import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 import { Client } from "postmark";
 
@@ -20,13 +21,13 @@ export async function POST(req: Request) {
   // cannot update the values for from and to until postmark tells me I'm verified
   const response = await client.sendEmail({
     From: "admin@eto.news",
-    To: "admin@eto.news",
+    To: "khalid.adan@gmail.com",
     Subject: "A new message from khld.dev",
     HtmlBody: render(
       ContactEmail({
-        name: name || "Khalid Adan",
-        email: email || "khalid.adan@gmail.com",
-        message: message || "Hello World",
+        name: name,
+        email: email,
+        message: message,
       })
     ),
   });
@@ -34,5 +35,5 @@ export async function POST(req: Request) {
   if (response.ErrorCode) {
     return NextResponse.json({ status: 500, message: response.Message });
   }
-  return NextResponse.json({ status: 200, message: "Email sent successfully" });
+  redirect(env.PUBLIC_CONTACT_URL);
 }

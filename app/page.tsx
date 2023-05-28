@@ -1,11 +1,12 @@
 "use client";
 
-import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import AvailableForWork from "@/components/common/AvailableForWork";
 import Header from "@/components/common/Header";
 import About from "@/components/homepage/About";
+import FavouriteTech from "@/components/homepage/FavouriteTech";
 import ProductsList from "@/components/homepage/ProductsList";
 import { AnimatedSection } from "@/components/ui/section";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
 
@@ -34,9 +35,11 @@ export default function Home() {
         )}
       </div>
       <ProductsList variants={childVariants} />
+      <TooltipProvider>
+        <FavouriteTech variants={childVariants} />
+      </TooltipProvider>
       {/* <Experience variants={childVariants} />
           <FavouriteTech variants={childVariants} /> */}
-      <AnimatedTurbulence />
     </AnimatedSection>
   );
 }

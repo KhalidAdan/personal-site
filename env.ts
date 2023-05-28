@@ -11,7 +11,7 @@ export const env = createEnv({
     POSTMARK_API_TOKEN: z.string().min(1),
   },
   client: {
-    PUBLIC_CONTACT_URL: z.string().optional(),
+    PUBLIC_CONTACT_URL: z.string(),
   },
   /**
    * What object holds the environment variables at runtime.

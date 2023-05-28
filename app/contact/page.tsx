@@ -1,6 +1,5 @@
 "use client";
 
-import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import AvailableForWork from "@/components/common/AvailableForWork";
 import Header from "@/components/common/Header";
 import AverageResponseTime from "@/components/contact/AverageResponseTime";
@@ -9,10 +8,16 @@ import ContactForm from "@/components/contact/ContactForm";
 import { AnimatedSection } from "@/components/ui/section";
 import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
+import { Metadata } from "next";
 
 const childVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
+};
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact me regarding work or just to say hi!",
 };
 
 const animation = getAnimationVariants("fadeInFromBottom");
@@ -30,7 +35,6 @@ export default function Contact() {
       <AvailableForWork variants={childVariants} contactMe={false} />
       <ContactForm variants={childVariants} />
       <AverageResponseTime variants={childVariants} />
-      <AnimatedTurbulence />
     </AnimatedSection>
   );
 }

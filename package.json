@@ -26,11 +26,15 @@
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "contentlayer": "^0.3.2",
+    "date-fns": "^2.30.0",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.3",
+    "express-rate-limit": "^6.7.0",
     "framer-motion": "^10.12.12",
     "lucide-react": "^0.220.0",
     "next": "13.4.3",
+    "next-contentlayer": "^0.3.2",
     "postcss": "8.4.23",
     "postmark": "^3.0.18",
     "react": "18.2.0",
@@ -44,6 +48,7 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/nodemailer": "^6.4.8"
   }
 }
