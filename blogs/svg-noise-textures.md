@@ -1,7 +1,7 @@
 ---
 title: Designing the perfect background using SVG noise textures
 description: SVG is a great tool for creating cool effects. In this article, I'll show you how to create a cool space effect with SVG and CSS, and work through some potential performance issues.
-date: May 21, 2023
+date: 2023-05-25T04:00:00.000Z
 tags:
   - Development
   - Design
@@ -9,11 +9,7 @@ tags:
 
 ## Defining the coolest possible backdrop
 
-In this blog post, we're going to delve into how to design an amazing space-themed backdrop.
-
-We'll discuss how to incorporate elements of the cosmos into your design, with stars playing a key role in setting the mood. More than that, we'll explore the idea of animating your backdrop to create the sensation of a journey through space, providing a dynamic and immersive experience.
-
-The goal is not just to create a static image, but to bring a piece of the universe into your room, making you feel as if you're moving through the cosmos.
+Space is cool. It's a fact. And so, I've decided to create a space themed backdrop for my contact page. I want it to be a bit more than just a static image, so I'm going to use SVG to create a cool animated effect. Let's get started!
 
 ## Creating the SVG
 
@@ -105,16 +101,62 @@ What the above snippet does is animate the `baseFrequency` property of the `feTu
 
 ## Adding some spice
 
-Going all in on the space-y vibe we've created, I've updated my contact page to add some pulse animations and new text to sell the effect! Check it out below!
+Going all in on the space-y vibe we've created, I've updated my contact page to add some pulse animations and new text to sell the effect! Check out a screen grab below!
 
 ![Space effect on contact page](/space-contact.gif) Check out the full effect [here](/space-contact.gif)!
 
 ### Performance and Accessibility considerations
 
-For performance reasons, we should consider using a PNG instead of an SVG. The reason for this is that the SVG is a vector image, and as such it is rendered by the browser. This means that the browser has to do a lot of work to render the image, and this can cause performance issues.
+While this technique is super cool, it does come with some caveats. The first is that it's not super performant. The SVG filter primitive is a pretty heavy operation, and so it's not something you want to be doing on a very serious app. I'd recommend using this technique sparingly, and only on pages where you can afford to have a bit of a performance hit like static blogs or personal sites.
 
-Another consideration is accessibility. The animation here is
+Though it has no baring on accessibility in terms of screen readers, it does generate a decent amount of movement on the page and that might be unsettling for some users. In this case, I'd recommend adding a CSS rule that hides the effect for users who prefer reduced motion. You can do this in tailwind by adding the following classes to the SVG element:
 
-## Browser support
+`className="h-0 motion-reduce:hidden pointer-events-none"`
 
-The browser support for this technique is pretty good. All modern browsers seem to support it pretty well, with th3e exception being Safari where (quite oddly) the support is unknown, but in my _very_ limited testing it seems to work fine.
+## Browser support The browser support for this technique is pretty good.
+
+All modern browsers seem to support it pretty well, with th3e exception being
+Safari where (quite oddly) the support is unknown, but in my _very_ limited
+testing it seems to work fine.
+</svg>
+
+### Putting it all together
+
+```html
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+  opacity="0.45"
+  className="h-0 motion-reduce:hidden pointer-events-none"
+>
+  <defs>
+    <filter id="space-filter">
+      <feTurbulence
+        type="fractalNoise"
+        stitchTiles="stitch"
+        result="turbulence"
+        baseFrequency="{0.3}"
+        numOctaves="{1}"
+        seed="{0}"
+      >
+        <animate
+          attributeName="baseFrequency"
+          dur="60s"
+          values="0.3;0.65"
+          repeatCount="indefinite"
+        />
+      </feTurbulence>
+      <feSpecularLighting
+        surfaceScale="15"
+        specularConstant="0.6"
+        specularExponent="20"
+        in="turbulence"
+        result="specularLighting"
+      >
+        <feDistantLight azimuth="3" elevation="75"></feDistantLight>
+      </feSpecularLighting>
+    </filter>
+  </defs>
+</svg>
+```

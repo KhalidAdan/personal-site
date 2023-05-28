@@ -13,9 +13,7 @@ export default function Header({ variants }: { variants: Variants }) {
       </div>
       <div>
         <TypographyLarge>Khalid Adan</TypographyLarge>
-        <TypographyMutedP>
-          Senior software developer and science fiction nerd!
-        </TypographyMutedP>
+        <TypographyMutedP>Senior software developer</TypographyMutedP>
       </div>
     </motion.div>
   );

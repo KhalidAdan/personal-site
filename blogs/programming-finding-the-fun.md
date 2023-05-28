@@ -1,7 +1,7 @@
 ---
 title: "Programming: finding the fun"
 description: "Take a second to consider: we send text instructions to a bunch of plastic and rocks that was convinced to think for us via lightning. We are wizards!"
-date: June 1, 2023
+date: 2023-06-01T04:00:00.000Z
 tags:
   - Development
 ---
@@ -10,13 +10,9 @@ There is a certain level of mystique that envelopes the field of programming. Wh
 
 ### Why programming is magic
 
-Let's take a moment to ponder over this: as programmers we are tasked with thorouglhy understanding a problem, and then instruct our computer, to solve it for us. These instructions are nothing more than a clear set of commands. It's as if we've embedded a part of our consciousness into the machine, enabling it to execute our thoughts and reach a solution.
+Let's take a moment to ponder over this: as programmers we are tasked with thoroughly understanding a problem, and then instruct our computer, to solve it for us. These instructions are nothing more than a clear set of commands. It's as if we've embedded a part of our consciousness into the machine, enabling it to execute our thoughts and reach a solution.
 
-This process of programming comes closest to the concept of telepathy, the supposed communication of thoughts or ideas by means other than the known senses. We take a thought, a solution, translate it into a language that the computer understands, and voila, our thought is now a reality. The definition of telepathy is:
-
-> the supposed communication of thoughts or ideas by means other than the known senses.
-
-You may say, 'Khalid, you are translating your thoughts by touch, and therefore it is not telepathy'. Okay, true but no need to be a nerd about it. This unique ability to create, to solve, and to manifest our thoughts into tangible outcomes really blows me away every time I think about it.
+This unique ability to create, to solve, and to manifest our thoughts into tangible outcomes really blows me away every time I think about it.
 
 ### Programming is a craft
 
