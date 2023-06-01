@@ -9,7 +9,7 @@ export default function FavouriteTech({ variants }: { variants: Variants }) {
     <AnimatedSection variants={variants}>
       <TypographyLarge>Favourite technologies</TypographyLarge>
 
-      <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-4">
+      <div className="grid grid-cols-4 md:grid-cols-6 md:gap-x-8 gap-y-6 pt-6">
         <TooltipHelper title="Next.js">
           <Avatar className="h-14 w-14 dark:bg-white rounded-full dark:border dark:border-white">
             <AvatarImage src="/next.svg" alt="Next.js" />

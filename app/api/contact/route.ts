@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
   // cannot update the values for from and to until postmark tells me I'm verified
   const response = await client.sendEmail({
-    From: "admin@eto.news",
+    From: "me@khld.dev",
     To: "khalid.adan@gmail.com",
     Subject: "A new message from khld.dev",
     HtmlBody: render(

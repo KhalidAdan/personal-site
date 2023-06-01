@@ -3,7 +3,7 @@ import { TypographyH1, TypographyLead } from "../Typography";
 
 export default function ContactCTA({ variants }: { variants: Variants }) {
   return (
-    <motion.div variants={variants} className="flex flex-col mb-4 mt-8">
+    <motion.div variants={variants} className="flex flex-col mb-6 mt-8">
       <TypographyH1>Say hello!</TypographyH1>
 
       <TypographyLead>

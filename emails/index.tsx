@@ -15,7 +15,7 @@ export default function Email({ name, email, message }: ContactEmailProps) {
       <Section style={main}>
         <Container style={container}>
           <Text style={heading}>
-            {name} at {email} reached out via your contact page!
+            User: {name} at email: {email} reached out via your contact page!
           </Text>
           <Text style={paragraph}>{message}</Text>
         </Container>

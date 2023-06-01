@@ -69,3 +69,14 @@ const animationVariants: AnimationVariants = {
   fadeInFromBottom: fadeInYAxis,
   slideInFromLeft: slideInXAxis,
 };
+
+export function dateHelper(date: Date) {
+  const today = new Date();
+  const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+  const differenceInTime = today.getTime() - new Date(date).getTime();
+
+  return {
+    isNew: differenceInTime < SEVEN_DAYS,
+    hasBeenReleased: differenceInTime > 0,
+  };
+}

@@ -45,15 +45,18 @@ export default function RootLayout({
         <main className="w-full">
           <section className="flex flex-col sm:flex-row container max-w-[662px] h-full pt-8 pb-10 px-4 w-full">
             <Nav />
-            <div className="flex flex-col w-full">{children}</div>
+            <div className="flex flex-col w-full">
+              {children}
+              <div className="flex justify-center pt-8 pb-6 bottom-0">
+                <TypographyMuted>
+                  {" "}
+                  &#169; KHLD.DEV {new Date().getFullYear()}.
+                </TypographyMuted>
+              </div>
+            </div>
           </section>
         </main>
-        <div className="flex justify-center pt-8 pb-6 bottom-0">
-          <TypographyMuted>
-            {" "}
-            &#169; KHLD.DEV {new Date().getFullYear()}.
-          </TypographyMuted>
-        </div>
+
         <AnimatedTurbulence />
       </body>
     </html>

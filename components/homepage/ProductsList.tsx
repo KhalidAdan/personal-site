@@ -21,7 +21,8 @@ const products: Product[] = [
     name: "Skillbox",
     description: "A platform for building a culture of learning. More to come!",
     image: "/sb.svg",
-    href: "https://skillbox.so",
+    // href: "https://skillbox.so",
+    href: "",
   },
 ];
 

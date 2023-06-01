@@ -13,7 +13,7 @@ export default function ProductListItem({
     <Link
       className="flex gap-3 items-center -mx-3 px-3 py-3 hover:bg-light/5 rounded-xl cursor-pointer"
       href={href}
-      target="_blank"
+      target={href ? "_blank" : undefined}
     >
       <div>
         <Avatar className="h-10 w-10">

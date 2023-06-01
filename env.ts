@@ -8,6 +8,7 @@ export const env = createEnv({
    */
   clientPrefix: "PUBLIC_",
   server: {
+    NODE_ENV: z.enum(["development", "production", "test"]),
     POSTMARK_API_TOKEN: z.string().min(1),
   },
   client: {

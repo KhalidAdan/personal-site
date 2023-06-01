@@ -1,7 +1,7 @@
 ---
 title: "Programming: finding the fun"
 description: "Take a second to consider: we send text instructions to a bunch of plastic and rocks that was convinced to think for us via lightning. We are wizards!"
-date: 2023-06-01T04:00:00.000Z
+date: 2023-05-28T04:00:00.000Z
 tags:
   - Development
 ---
