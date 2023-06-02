@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preview-email": "email dev"
+    "preview-email": "email dev",
+    "test": "jest --watch --verbose"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.2",
@@ -49,6 +50,10 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/nodemailer": "^6.4.8"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/nodemailer": "^6.4.8",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0"
   }
 }
