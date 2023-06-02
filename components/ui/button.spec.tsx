@@ -12,7 +12,7 @@ describe("Button", () => {
     const { getByTestId } = render(<Button data-testid="button" />);
     const buttonElement = getByTestId("button");
     expect(buttonElement).toHaveClass(
-      buttonVariants({ variant: "default", size: "default" }).join(" ")
+      buttonVariants({ variant: "default", size: "default" })
     );
   });
 
@@ -22,7 +22,7 @@ describe("Button", () => {
     );
     const buttonElement = getByTestId("button");
     expect(buttonElement).toHaveClass(
-      buttonVariants({ variant: "secondary", size: "default" }).join(" ")
+      buttonVariants({ variant: "secondary", size: "default" })
     );
   });
 
@@ -51,7 +51,7 @@ describe("Button", () => {
       </Button>
     );
     const buttonElement = getByTestId("button");
-    expect(buttonElement.tagName).toBe("SLOT");
+    expect(buttonElement.tagName).toBe("SPAN");
     expect(buttonElement.firstChild).toHaveTextContent("Click me");
   });
 });

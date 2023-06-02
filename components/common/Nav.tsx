@@ -12,8 +12,6 @@ let tabs: Tabs = [
   { id: "home", label: "Home", pathname: "/" },
   { id: "contact", label: "Contact", pathname: "/contact" },
   { id: "blog", label: "Blog", pathname: "/blog" },
-  // { id: "resume", label: "Experience", pathname: "/resume" },
-  // { id: "stack", label: "Stack", pathname: "/stack" },
 ];
 
 export default function Nav() {
@@ -46,9 +44,16 @@ export default function Nav() {
                     layoutId="nav-bubble"
                     className="absolute inset-0 z-10 bg-dark/20 dark:bg-light/20 mix-blend-difference rounded-lg"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    data-testid="active-nav-bubble"
                   />
                 )}
-                <TypographySmall>{tab.label}</TypographySmall>
+                <TypographySmall>
+                  <span
+                    data-testid={activeTab ? "active-nav-label" : "nav-label"}
+                  >
+                    {tab.label}
+                  </span>
+                </TypographySmall>
               </Link>
             );
           })}

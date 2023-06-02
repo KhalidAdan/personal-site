@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "preview-email": "email dev",
-    "test": "jest --watch --verbose"
+    "test": "jest --verbose"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.2",
