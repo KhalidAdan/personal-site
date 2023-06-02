@@ -3,12 +3,12 @@
 import { TypographyH1, TypographyH3 } from "@/components/Typography";
 import Header from "@/components/common/Header";
 import { Badge } from "@/components/ui/badge";
+
 import { AnimatedSection } from "@/components/ui/section";
-import { dateHelper, getAnimationVariants } from "@/lib/client.utils";
+import { dateHelper, getAnimationVariants } from "@/lib/utils";
 import { Blog, allBlogs } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import { Variants } from "framer-motion";
-import Image from "next/image";
 import BlogBadge from "../BlogBadge";
 
 const animation = getAnimationVariants("fadeInFromBottom");
@@ -31,7 +31,7 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
       variants={animation}
       initial="hidden"
       animate="visible"
-      className="mt-0"
+      className="mt-0 space-y-2"
     >
       <Header variants={childVariants}></Header>
       <AnimatedSection variants={childVariants}>
@@ -47,8 +47,23 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
             variants={childVariants}
             key={idx}
           >
-            <article className="flex max-w-xl flex-col items-start justify-between pb-4 sm:-mx-5 px-5 py-3.5 rounded-xl dark:hover:bg-light/5 light:hover:bg-dark/5">
+            <article className="flex max-w-xl flex-col items-start justify-between pb-4 sm:-mx-5 px-5 py-5 rounded-xl dark:hover:bg-light/5 light:hover:bg-dark/5">
               <a href={`blog/${blog.url}`}>
+                {blog.image && (
+                  <div className="mb-4">
+                    <img
+                      src={blog.image}
+                      alt={`${blog.title} cover image`}
+                      className="w-full max-h-64 object-cover object-center rounded-lg shadow-md"
+                      loading="lazy"
+                      aria-label={blog.title}
+                      aria-describedby="image-description"
+                    />
+                    <p id="image-description" className="sr-only">
+                      {blog.title} image
+                    </p>
+                  </div>
+                )}
                 <div className="flex items-center gap-x-3.5 text-xs">
                   <time
                     dateTime={blog.date}
@@ -67,23 +82,17 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
                     ))}
                   <BlogBadge isNew={isNew} hasBeenReleased={hasBeenReleased} />
                 </div>
-                {blog.image && (
-                  <Image
-                    src={blog.image}
-                    alt={`${blog.title} cover image`}
-                    className="w-full mt-4 max-h-64 object-cover object-center rounded-lg shadow-md"
-                  />
-                )}
+
                 <div className="group relative pt-4">
                   <TypographyH3>
                     <span className="absolute inset-0" />
                     {blog.title}
                   </TypographyH3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                  <p className="mt-4 line-clamp-3 text-sm leading-6 text-gray-600">
                     {blog.description}
                   </p>
                 </div>
-              </a>{" "}
+              </a>
             </article>
           </AnimatedSection>
         );

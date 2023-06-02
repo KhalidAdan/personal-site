@@ -1,6 +1,5 @@
 import BlogPost from "@/components/blog/pages/BlogPage";
 import { allBlogs } from "contentlayer/generated";
-import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
   return allBlogs.map((blog) => ({
@@ -9,9 +8,9 @@ export function generateStaticParams() {
 }
 
 export default function BlogBySlug({ params }: { params: { slug: string } }) {
-  const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
-
-  if (!blog) notFound();
+  const blog = allBlogs.find(
+    (blog) => blog._raw.flattenedPath === params.slug
+  )!;
 
   return (
     <BlogPost

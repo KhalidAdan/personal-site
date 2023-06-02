@@ -1,7 +1,7 @@
 ---
 title: "Embarking on a Technological Odyssey: New projects, new horizons"
 description: "I am going to spend some time refreshing my knowledge of computer science (been awhile since school), as I'd like to do start doing some longer term hobby projects outside of my unannounced saas product."
-date: 2023-06-14T04:00:00.000Z
+date: 2023-06-08T04:00:00.000Z
 tags:
   - Browsers
   - Operating Systems

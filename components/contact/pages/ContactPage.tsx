@@ -6,7 +6,7 @@ import AverageResponseTime from "@/components/contact/AverageResponseTime";
 import ContactCTA from "@/components/contact/ContactCTA";
 import ContactForm from "@/components/contact/ContactForm";
 import { AnimatedSection } from "@/components/ui/section";
-import { getAnimationVariants } from "@/lib/client.utils";
+import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
 
 const childVariants: Variants = {

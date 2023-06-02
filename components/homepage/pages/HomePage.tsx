@@ -7,7 +7,7 @@ import FavouriteTech from "@/components/homepage/FavouriteTech";
 import ProductsList from "@/components/homepage/ProductsList";
 import { AnimatedSection } from "@/components/ui/section";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { getAnimationVariants } from "@/lib/client.utils";
+import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
 
 const availableForWork = true;
