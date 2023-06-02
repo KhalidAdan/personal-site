@@ -2,14 +2,18 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import * as React from "react";
 
-const Div = React.forwardRef<
-  React.ElementRef<"div">,
-  React.ComponentPropsWithoutRef<"div">
+const Section = React.forwardRef<
+  React.ElementRef<"section">,
+  React.ComponentPropsWithoutRef<"section">
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("flex flex-col mt-12", className)} {...props} />
+  <section
+    ref={ref}
+    className={cn("flex flex-col mt-12", className)}
+    {...props}
+  />
 ));
-Div.displayName = "Section";
+Section.displayName = "Section";
 
-const AnimatedSection = motion(Div, { forwardMotionProps: true });
+const AnimatedSection = motion(Section, { forwardMotionProps: true });
 
 export { AnimatedSection };
