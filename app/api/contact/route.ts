@@ -1,9 +1,10 @@
 import ContactEmail from "@/emails";
 import { env } from "@/env";
 import { render } from "@react-email/render";
-import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 import { Client } from "postmark";
+
+// testing next 13 route handlers https://www.npmjs.com/package/next-test-api-route-handler WIP
 
 export async function POST(req: Request) {
   const token = env.POSTMARK_API_TOKEN;
@@ -35,5 +36,5 @@ export async function POST(req: Request) {
   if (response.ErrorCode) {
     return NextResponse.json({ status: 500, message: response.Message });
   }
-  redirect(env.PUBLIC_CONTACT_URL);
+  //redirect(env.PUBLIC_CONTACT_URL);
 }

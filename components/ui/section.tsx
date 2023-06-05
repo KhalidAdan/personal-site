@@ -16,4 +16,4 @@ Section.displayName = "Section";
 
 const AnimatedSection = motion(Section, { forwardMotionProps: true });
 
-export { AnimatedSection };
+export { AnimatedSection, Section };

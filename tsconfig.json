@@ -30,7 +30,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "./.contentlayer/generated"
+    "./.contentlayer/generated",
+    "jest.config.js",
+    "jest.setup.js"
   ],
   "exclude": ["node_modules"]
 }
