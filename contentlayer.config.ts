@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "@contentlayer/source-files";
+import rehypeRaw from "rehype-raw";
 
 export const Blog = defineDocumentType(() => ({
   name: "Blog",
@@ -24,6 +25,10 @@ export default makeSource({
   documentTypes: [Blog],
   markdown: {
     remarkPlugins: [],
-    rehypePlugins: [],
+    rehypePlugins: [rehypeRaw],
+  },
+  mdx: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeRaw],
   },
 });

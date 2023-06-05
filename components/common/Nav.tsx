@@ -16,7 +16,6 @@ let tabs: Tabs = [
 
 export default function Nav() {
   const pathname = usePathname();
-
   return (
     <motion.aside
       className="sm:min-w-[150px] sm:mt-64 pt-2 mb-10 sm:mb-6 text-left"

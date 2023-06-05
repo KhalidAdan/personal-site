@@ -28,6 +28,7 @@ const customJestConfig = {
     "!**/next-env.d.ts",
     "!**/tailwind.config.js",
     "!contentlayer.config.ts",
+    "!postcss.config.js",
     "!env.ts",
   ],
   coverageReporters: ["json", "lcov", "text", "clover"],

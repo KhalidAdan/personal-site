@@ -1,6 +1,15 @@
-export function TypographyH1({ children }: { children: React.ReactNode }) {
+export function TypographyH1({
+  children,
+  ref,
+}: {
+  children: React.ReactNode;
+  ref?: React.RefObject<HTMLHeadingElement>;
+}) {
   return (
-    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-8">
+    <h1
+      ref={ref}
+      className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-8"
+    >
       {children}
     </h1>
   );

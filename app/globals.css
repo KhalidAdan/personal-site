@@ -16,7 +16,9 @@
   }
 }
 
-/* html {
+/* 
+// svg BG
+html {
   position: relative;
 }
 
@@ -36,7 +38,7 @@ body::before {
   filter: url(#space-filter);
 } */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -44,7 +46,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 @layer base {
   :root {
@@ -69,8 +71,8 @@ body {
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --success: 120, 100%, 50%;
-    --success-foreground: 142.2 47.4% 11.2%;
+    --success: 142, 69%, 58%;
+    --success-foreground: 142, 69%, 58%;
  
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
