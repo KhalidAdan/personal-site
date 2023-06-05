@@ -65,7 +65,7 @@ const slideInXAxis: Variants = {
   },
 };
 
-const animationVariants: AnimationVariants = {
+export const animationVariants: AnimationVariants = {
   fadeInFromBottom: fadeInYAxis,
   slideInFromLeft: slideInXAxis,
 };
