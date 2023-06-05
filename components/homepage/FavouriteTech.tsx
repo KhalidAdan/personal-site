@@ -89,7 +89,7 @@ export default function FavouriteTech({ variants }: { variants: Variants }) {
         </TooltipHelper>
 
         <TooltipHelper title="Postmark">
-          <Avatar className="h-14 w-14 bg-black">
+          <Avatar className="h-14 w-14">
             <AvatarImage src="/postmark.bmp" alt="Postmark" />
             <AvatarFallback className="bg-accent-gray ">
               Postmark

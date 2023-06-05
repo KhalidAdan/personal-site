@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="min-h-full">
+    <html lang="en" className="dark">
       <body className={inter.className}>
         <main className="w-full">
           <section className="flex flex-col sm:flex-row container max-w-[662px] h-full pt-8 pb-10 px-4 w-full">

@@ -12,13 +12,10 @@ let tabs: Tabs = [
   { id: "home", label: "Home", pathname: "/" },
   { id: "contact", label: "Contact", pathname: "/contact" },
   { id: "blog", label: "Blog", pathname: "/blog" },
-  // { id: "resume", label: "Experience", pathname: "/resume" },
-  // { id: "stack", label: "Stack", pathname: "/stack" },
 ];
 
 export default function Nav() {
   const pathname = usePathname();
-
   return (
     <motion.aside
       className="sm:min-w-[150px] sm:mt-64 pt-2 mb-10 sm:mb-6 text-left"
