@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Variants, motion } from "framer-motion";
 import { Loader2, Mail } from "lucide-react";
-import React, { useEffect } from "react";
+import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 interface ContactFormProps extends React.HTMLAttributes<HTMLFormElement> {
@@ -20,13 +20,6 @@ type FormValues = {
 
 export default function ContactForm({ variants }: ContactFormProps) {
   const [isSending, setIsSending] = React.useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);
-
-  useEffect(() => {
-    if (document.documentElement.classList.contains("dark")) {
-      setIsDarkMode(true);
-    }
-  }, [document.documentElement.classList]);
 
   const { register, handleSubmit, reset } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
