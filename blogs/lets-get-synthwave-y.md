@@ -2,7 +2,7 @@
 title: "Let's get synthwave-y"
 description: "Were the 80's really the best decade? I don't know for sure, but I do know that the music was pretty good."
 image: /synthwave-baby.avif
-date: 2023-06-14T04:00:00.000Z
+date: 2023-06-11T04:00:00.000Z
 tags:
   - 4FUN
   - CSS

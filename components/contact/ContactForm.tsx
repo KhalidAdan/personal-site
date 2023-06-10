@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Variants, motion } from "framer-motion";
 import { Loader2, Mail } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 interface ContactFormProps extends React.HTMLAttributes<HTMLFormElement> {
@@ -20,6 +20,13 @@ type FormValues = {
 
 export default function ContactForm({ variants }: ContactFormProps) {
   const [isSending, setIsSending] = React.useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);
+
+  useEffect(() => {
+    if (document.documentElement.classList.contains("dark")) {
+      setIsDarkMode(true);
+    }
+  }, [document.documentElement.classList]);
 
   const { register, handleSubmit, reset } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
@@ -42,17 +49,17 @@ export default function ContactForm({ variants }: ContactFormProps) {
     <motion.form
       variants={variants}
       name="contact-form"
-      className="flex flex-col mt-8 pt-6 mb-2 border-t border-light/10"
+      className="flex flex-col mt-8 pt-6 gap-4 mb-2 border-t border-light/10"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex gap-4">
+      <div className="flex gap-x-4">
         <div className="w-full">
           <label htmlFor="name" className="hidden sr-only">
             Name
           </label>
           <Input
-            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 bg-accent-gray/10 border-none dark:placeholder-shown:motion-safe:focus:animate-pulse"
             placeholder="Name"
+            type="text"
             {...register("name", { required: true })}
           />
         </div>
@@ -61,7 +68,6 @@ export default function ContactForm({ variants }: ContactFormProps) {
             E-mail
           </label>
           <Input
-            className="dark:bg-accent-gray/50 dark:placeholder:text-light/50 bg-accent-gray/10 border-none dark:placeholder-shown:motion-safe:focus:animate-pulse"
             placeholder="Email"
             type="email"
             {...register("email", { required: true })}
@@ -69,7 +75,7 @@ export default function ContactForm({ variants }: ContactFormProps) {
         </div>
       </div>
       <Textarea
-        className="mt-4 dark:bg-accent-gray/50 dark:placeholder:text-light/50 bg-accent-gray/10 border-none resize-none dark:placeholder-shown:motion-safe:focus:animate-pulse"
+        className=""
         placeholder="Type your message here."
         rows={6}
         {...register("message", { required: true })}

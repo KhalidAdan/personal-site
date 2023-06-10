@@ -11,6 +11,7 @@ const useAnimatedText = (
   const intervalRef = useRef<number | undefined>(undefined);
   const elementRef = useRef<HTMLHeadingElement>(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const totalIterations = options?.totalIterations ?? 3;
 
   useEffect(() => {
     const element = elementRef.current;
@@ -19,37 +20,41 @@ const useAnimatedText = (
       return;
     }
     const text = element.innerText;
-
+    const textLength = text.length;
     let iteration = 0;
 
     clearInterval(intervalRef.current);
 
-    intervalRef.current = window.setInterval(() => {
+    const animate = () => {
       setIsAnimating(true);
-      element.innerText = element.innerText
-        .split("")
-        .map((_, index) => {
-          if (index < iteration) {
-            return text[index];
-          }
+      let newText =
+        text.substring(0, iteration) + getRandomLetters(textLength - iteration);
+      element.innerText = newText;
 
-          return letters[Math.floor(Math.random() * 26)];
-        })
-        .join("");
-
-      if (iteration >= text.length) {
-        clearInterval(intervalRef.current);
-        setIsAnimating(false);
+      if (iteration >= textLength) {
+        stopAnimation();
       }
 
-      iteration += 1 / (options?.totalIterations ?? 3);
-    }, 40);
+      iteration += 1 / totalIterations;
+    };
 
-    return () => {
+    const getRandomLetters = (num: number) => {
+      let result = "";
+      for (let i = 0; i < num; i++) {
+        result += letters[Math.floor(Math.random() * 26)];
+      }
+      return result;
+    };
+
+    const stopAnimation = () => {
       clearInterval(intervalRef.current);
       setIsAnimating(false);
     };
-  }, [options?.totalIterations]);
+
+    intervalRef.current = window.setInterval(animate, 40);
+
+    return stopAnimation;
+  }, [totalIterations]);
 
   return [elementRef, isAnimating];
 };

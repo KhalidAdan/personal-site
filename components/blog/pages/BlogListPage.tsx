@@ -1,11 +1,10 @@
 "use client";
 
-import { TypographyH3 } from "@/components/Typography";
+import { TypographyH1, TypographyH3 } from "@/components/Typography";
 import Header from "@/components/common/Header";
 import { Badge } from "@/components/ui/badge";
 
 import { AnimatedSection } from "@/components/ui/section";
-import useAnimatedText from "@/hooks/useAnimatedEffect";
 import { dateHelper, getAnimationVariants } from "@/lib/utils";
 import { Blog, allBlogs } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
@@ -27,9 +26,6 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
   const blogs: Blog[] = allBlogs.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
-  const [ref, isAnimating] = useAnimatedText({
-    totalIterations: 4,
-  });
   return (
     <AnimatedSection
       variants={animation}
@@ -39,16 +35,7 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
     >
       <Header variants={childVariants}></Header>
       <AnimatedSection variants={childVariants} className="mt-10">
-        <p
-          ref={ref}
-          className={`scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-2 transition-all ease-in-out duration-500 ${
-            isAnimating
-              ? "-skew-x-12 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-100"
-              : ""
-          }`}
-        >
-          Brainwaves
-        </p>
+        <TypographyH1>Thoughts and ideas go here</TypographyH1>
         <h1 className="sr-only">Blog posts</h1>
       </AnimatedSection>
       {blogs.map((blog, idx) => {

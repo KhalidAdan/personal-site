@@ -2,10 +2,10 @@ import { TypographyMuted } from "@/components/Typography";
 import AnimatedTurbulence from "@/components/common/AnimatedTurbulence";
 import Nav from "@/components/common/Nav";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark min-h-full">
       <body className={inter.className}>
         <main className="w-full">
           <section className="flex flex-col sm:flex-row container max-w-[662px] h-full pt-8 pb-10 px-4 w-full">
@@ -56,7 +56,7 @@ export default function RootLayout({
             </div>
           </section>
         </main>
-
+        {/* Does not have any effect until the SVG is enabled in the globals.css file by adding the filter defined here */}
         <AnimatedTurbulence />
       </body>
     </html>
