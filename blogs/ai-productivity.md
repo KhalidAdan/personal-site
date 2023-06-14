@@ -1,7 +1,7 @@
 ---
 title: "Productivity in the Age of AI"
 description: "In this series of posts, I'll be using AI assistants and the newest web technologies to try and release the MVP of a Saas product I've been thinking about for awhile."
-date: 2023-06-14T04:00:00.000Z
+date: 2023-06-16T04:00:00.000Z
 tags:
   - AI
   - Productivity
