@@ -7,9 +7,20 @@ tags:
   - Operating Systems
 ---
 
+Hey there, fellow nerd!
+
+So, here's the lowdown: right now, I'm betwixt professional engagements. Fancy talk for "between gigs," but hey, who's counting? A few health concerns decided to gatecrash my interview/cram-sesh/interview-again party, so I'm handling those. Life and its interesting timing, am I right?
+
+Meanwhile, I'm not just twiddling my thumbs or becoming a couch potato. I've got some exciting plans up my sleeve—A bit of a sneak peek for you: I'm cooking up a SaaS product (I know, intriguing) and wrangling with some dense, mind-bending CS projects. Yes, you heard it right, voluntarily taking on the tough stuff.
+
+The point here is to learn, to have fun (yes, CS projects are fun, thank you very much), to dust off my skills and keep them shiny, and of course, to build. Because at the end of the day, we're creators, aren't we?
+
+So, here we go, diving headfirst into the deep end of the pool. Hold on to your hats, it's about to get interesting.
+
+---
 Historically, I only revisited subjects from my school days when preparing for job interviews. These study sessions consisted of a few days of cramming and practicing LeetCode questions, after which I promptly forgot everything. Recently, however, my usual web programming pursuits haven't been satisfying, prompting me to seek deeper engagement. I believe that diving into a hobby project or two could reignite my passion.
 
-My primary interest lies in gaining depth of understanding. I yearn to return to the basics, to grasp the inner workings of technology. I desire to create something from the ground up and conclude the project with a profound understanding of the underlying concepts. The project's public release isn't important to me; instead, I want to take pride in the fact that I built it myself, fully understand its operation, and could recreate it if necessary.
+My primary interest lies in gaining depth of understanding. I really want to to return to the basics, to grasp the inner workings of technology. I desire to create something from the ground up and conclude the project with a profound understanding of the underlying concepts. The project's public release isn't important to me; instead, I want to take pride in the fact that I built it myself, fully understand its operation, and could recreate it if necessary.
 
 ## The idea
 
@@ -29,7 +40,7 @@ Key features of this space should include:
 4. Have a way to search your content
 5. Have a way to share your content with others, and create content (widgets) that can be shared with others
 
-Now it goes without saying this is a _huge_ undertaking. I'm unsure whether it will ever come to fruition, but I'm eager to learn.
+Now it goes without saying this is a _huge_ undertaking. I'm unsure whether it will ever come to fruition, but I'm eager to to give myself headaches over this one.
 
 ### A more intuitive way to interact with your computer
 
