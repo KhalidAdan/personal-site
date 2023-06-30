@@ -3,8 +3,7 @@
 import useFocusTimer from "@/hooks/useFocusTimer";
 import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { ClockIcon, History } from "lucide-react";
 import React from "react";
 import { TypographyH1 } from "../Typography";
 import Header from "../common/Header";
@@ -21,9 +20,11 @@ const childVariants: Variants = {
 };
 
 const FocusTimer = () => {
-  const [selectedFocusTime, setSelectedFocusTime] = React.useState<
-    number | null
-  >(null);
+  const [focusTime, setFocusTime] = React.useState<number | null>(null);
+
+  const handleFocusTimeChange = (newFocusTime: number) => {
+    setFocusTime(newFocusTime);
+  };
 
   return (
     <div className="min-h-[50vh]">
@@ -33,58 +34,61 @@ const FocusTimer = () => {
         initial="hidden"
         animate="visible"
       >
-        <Link
-          href="/blog"
-          className="flex gap-x-1 text-muted-foreground uppercase text-sm mb-6 items-center"
-        >
-          <ArrowLeft className="h-4 w-4" /> Back
-        </Link>
         <Header variants={childVariants}></Header>
         <h1 className="sr-only">focus timer</h1>
-        <SelectFocusTime />
+        {!focusTime && <SelectFocusTime onChange={handleFocusTimeChange} />}
+        {focusTime && <TimerSection focusTimeInMinutes={focusTime} />}
       </AnimatedSection>
     </div>
   );
 };
 
-const SelectFocusTime = () => {
+const SelectFocusTime: React.FC<{
+  onChange: (arg: number) => void;
+}> = ({ onChange }) => {
   return (
-    <>
-      <AnimatedSection
-        className="mt-0"
-        variants={animation}
-        initial="hidden"
-        animate="visible"
-      >
-        <AnimatedSection variants={childVariants} className="mt-10">
-          <TypographyH1>How long would you like to focus for?</TypographyH1>
-        </AnimatedSection>
-        <AnimatedSection className="flex-row gap-x-4">
-          <Button className="flex-1 text-xl">30 mins</Button>
-          <Button className="flex-1 text-xl">60 mins</Button>
-          <Button className="flex-1 text-xl">90 mins</Button>
-        </AnimatedSection>
+    <AnimatedSection
+      className="mt-0"
+      variants={animation}
+      initial="hidden"
+      animate="visible"
+    >
+      <AnimatedSection variants={childVariants}>
+        <TypographyH1>How long would you like to focus for?</TypographyH1>
       </AnimatedSection>
-    </>
+      <AnimatedSection className="flex-row gap-x-4">
+        <Button className="flex-1 text-xl" onClick={() => onChange(30)}>
+          30 mins
+        </Button>
+        <Button className="flex-1 text-xl" onClick={() => onChange(60)}>
+          60 mins
+        </Button>
+        <Button className="flex-1 text-xl" onClick={() => onChange(90)}>
+          90 mins
+        </Button>
+      </AnimatedSection>
+    </AnimatedSection>
   );
 };
 
-const TimerSection = () => {
-  let initialMinutes = 25;
-  const { seconds, isActive, toggle, reset } = useFocusTimer(initialMinutes);
+const TimerSection: React.FC<{ focusTimeInMinutes: number }> = ({
+  focusTimeInMinutes,
+}) => {
+  const { seconds, isActive, toggle, reset } =
+    useFocusTimer(focusTimeInMinutes);
 
   const minutes = Math.floor(seconds / 60);
   const remSeconds = seconds % 60;
 
-  const totalSeconds = initialMinutes * 60;
+  const totalSeconds = focusTimeInMinutes * 60;
   const elapsedSeconds = totalSeconds - seconds;
   const progress = (elapsedSeconds / totalSeconds) * 100;
   return (
-    <>
-      <AnimatedSection variants={childVariants} className="mt-10">
+    <AnimatedSection variants={childVariants} className="mt-6">
+      <AnimatedSection className="mt-4">
         <TypographyH1>Time to getir done, huh?</TypographyH1>
       </AnimatedSection>
-      <AnimatedSection className="text-center">
+      <AnimatedSection className="text-center mt-4">
         <label className="mb-4">
           <span className="text-6xl">{String(minutes).padStart(2, "0")}</span>
           <span className="text-2xl">
@@ -93,10 +97,13 @@ const TimerSection = () => {
         </label>
       </AnimatedSection>
       <Progress value={progress} />
-      <AnimatedSection className="flex flex-row  justify-center gap-x-4 mt-4">
-        <Button onClick={toggle}>{isActive ? "Pause" : "Start"}</Button>
-        <Button className="button" onClick={reset}>
-          Reset
+      <AnimatedSection className="flex flex-row  justify-center gap-x-6 mt-6">
+        <Button onClick={toggle} className="text-xl">
+          <ClockIcon className="mr-2 h-4 w-4" />
+          {isActive ? "Pause" : "Start"}
+        </Button>
+        <Button onClick={reset} className="text-xl">
+          <History className="mr-2 h-4 w-4" /> Reset
         </Button>
         <SoundPlayer
           play={isActive}
@@ -104,7 +111,7 @@ const TimerSection = () => {
           loop
         />
       </AnimatedSection>
-    </>
+    </AnimatedSection>
   );
 };
 
