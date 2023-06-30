@@ -41,7 +41,7 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
       {blogs.map((blog, idx) => {
         const { isNew, hasBeenReleased } = dateHelper(new Date(blog.date));
 
-        if (!hasBeenReleased && !isDev) return null;
+        if ((!hasBeenReleased && !isDev) || blog?.archived) return null;
         return (
           <AnimatedSection
             className="gap-y-1 mt-1"
