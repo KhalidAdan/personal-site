@@ -18,6 +18,8 @@ Note: This is not a definitive reading order, with all of Coates work as the mai
 
 Collects Black Panther (2016) #1-4, Fantastic Four #52.
 
+![Black Panther (2016) A Nation Under Our Feet Vol. 1](https://m.media-amazon.com/images/P/B01JT4A2DW.01._SCLZZZZZZZ_SX500_.jpg)
+
 The first arc of Ta-Nehisi Coates' run on Black Panther, this is where it all starts. It explores T'Challa's rule and the political unrest in Wakanda. Beautifully illustrated by Brian Stelfreeze, this story sets up the complex world that the following arcs build upon. Stelfreeze's art is insanely good and the story is less of the trope-y afro-superhero stuff and more of a political drama. It's a great start to the series.
 
 You can skip Fantastic Four #52 if you like here!
@@ -26,11 +28,15 @@ You can skip Fantastic Four #52 if you like here!
 
 Collects Black Panther (2016) #5-8, Jungle Action #6-7.
 
+![Black Panther: A Nation Under Our Feet Vol. 2](https://m.media-amazon.com/images/P/B01NBP7T8S.01._SCLZZZZZZZ_SX500_.jpg)
+
 This collection continues the storyline from the first volume, deepening the conflict and political tensions within Wakanda.
 
 ## Black Panther (2016) A Nation Under Our Feet Vol. 3
 
 Collects Black Panther (2016) #9-12 and material from New Avengers (2013) #18, 21, 24.
+
+![Black Panther: A Nation Under Our Feet Vol. 3](https://m.media-amazon.com/images/P/B06XDFDY11.01._SCLZZZZZZZ_SX500_.jpg)
 
 In this volume, the storyline of 'A Nation Under Our Feet' comes to its conclusion, with new threats and challenges to T'Challa's rule.
 
@@ -38,25 +44,33 @@ In this volume, the storyline of 'A Nation Under Our Feet' comes to its conclusi
 
 Collecting Black Panther (2016) #13-18.
 
+![Black Panther Vol. 4: Avengers of the New World Part 1: Avengers of the New World Book 1](https://m.media-amazon.com/images/P/B076BYRY33.01._SCLZZZZZZZ_SX500_.jpg)
+
 The first half of the "Avengers of the New World" story arc that introduces a new era of conflict and discovery for T'Challa.
 
 ## Black Panther Vol. 5: Avengers of the New World Part 2: Avengers of the New World Book 2
 
 Collecting Black Panther (2016) #166-172.
 
+![Black Panther Vol. 5: Avengers of the New World Part 2: Avengers of the New World Book 2](https://m.media-amazon.com/images/P/B07C7HRTRV.01._SCLZZZZZZZ_SX500_.jpg)
+
 The conclusion of the "Avengers of the New World" story arc, rounding out the final chapters of Coates' initial Black Panther run.
 
 After a brief hiatus, Coates returns to the Black Panther series with a completely new story arc:
 
-## Black Panther Vol. 6: The Intergalactic Empire of Wakanda Part One
+## Black Panther Vol. 3: The Intergalactic Empire of Wakanda Part One
 
-Collects Black Panther (vol. 7) #1–12.
+Collects Black Panther (2018) #1–12.
+
+![Alt text](https://m.media-amazon.com/images/P/B08GD1H8C8.01._SCLZZZZZZZ_SX500_.jpg)
 
 This is the first half of the "Intergalactic Empire of Wakanda" story arc, which is a completely new direction for the series. It's a great jumping on point for new readers, as it's a completely new story arc, and it's a great continuation of the series for long-time readers. So. much. cool. stuff. In this arc.
 
-## Black Panther Vol. 7: The Intergalactic Empire of Wakanda Part Two
+## Black Panther Vol. 4: The Intergalactic Empire Of Wakanda Part Two
 
-Collects Black Panther (vol. 7) #13–25.
+Collects Black Panther (2018) #13–25.
+
+![Alt text](https://m.media-amazon.com/images/P/B09NL95ND9.01._SCLZZZZZZZ_SX500_.jpg)
 
 The conclusion of the "Intergalactic Empire of Wakanda" story arc, rounding out the final chapters of Coates' second Black Panther run.
 
@@ -66,4 +80,4 @@ Starting this past June, T'Challa returned to Earth with a new run helmed by Eve
 
 > After a difficult war with the Intergalactic Empire of Wakanda, King T'Challa returned home to find Wakanda—and his place in it—greatly changed in his absence. A king is called to make tough decisions, but T'Challa's choices in the wake of this change saw him ousted from the Avengers and exiled from Wakanda.
 
-You're all caught up and can start reading the new series! Have fun!
+You're all caught up (as of today) and can start reading the new series! Have fun!

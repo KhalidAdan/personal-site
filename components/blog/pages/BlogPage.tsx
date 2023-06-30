@@ -55,7 +55,7 @@ export default function Blog({
       <Header variants={childVariants}></Header>
       <AnimatedSection
         variants={childVariants}
-        className="mt-0 prose prose-lg prose-neutral dark:prose-invert prose-h2:mt-8 prose-h3:mt-8 pt-4 sm:pt-12 prose-pre:max-w-[512px]"
+        className="mt-0 prose prose-lg prose-neutral dark:prose-invert prose-h2:mt-8 prose-h3:mt-8 pt-4 sm:pt-12 prose-pre:max-w-[512px] prose-img:m-auto prose-img:rounded-md"
       >
         <TypographyH1>{title}</TypographyH1>
         <section className="flex -mt-8 gap-x-3 items-center">
