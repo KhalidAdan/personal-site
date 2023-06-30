@@ -1,7 +1,7 @@
 ---
 title: "Reading Order: Black Panther by Ta-Nehisi Coates"
 description: "A reading order for the Black Panther series by Ta-Nehisi Coates."
-date: 2023-07-01T04:00:00.000Z
+date: 2023-06-30T04:00:00.000Z
 tags:
   - 4FUN
   - Comic books
