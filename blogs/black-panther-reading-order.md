@@ -10,7 +10,7 @@ tags:
 
 Happy Canada Day!
 
-This is a departure from my usual posts, but I wanted to share a reading order I put together for the Black Panther series by Ta-Nehisi Coates. I've been re-reading the series, and I've been enjoying it a lot. I've also been gushing about it to anyone who will listen for the past few years (as well as Hudlin's run), so I figured I'd put together a reading order for anyone who wants to get into it. If I've been given this link, I hope you enjoy the series as much as I have!
+This is a departure from my usual posts, but I wanted to share a reading order I put together for the Black Panther series by Ta-Nehisi Coates. I've been re-reading the series, and I've been enjoying it a lot. I've also been gushing about it to anyone who will listen for the past few years (as well as Hudlin's run), so I figured I'd put together a reading order for anyone who wants to get into it. If you've been given this link (most likely by me), I hope you enjoy the series as much as I have!
 
 Note: This is not a definitive reading order, with all of Coates work as the main author or co-author. This leaves out some of the spin-off series, like World of Wakanda, and some of the one-off issues, like the Black Panther Annuals (though they are pretty cool!) and things like Rise of the Black Panther and any Deadpool shenanigans. This is just the main series, with the main story arc, as I see it.
 
