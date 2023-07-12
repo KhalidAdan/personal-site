@@ -12,6 +12,7 @@ let tabs: Tabs = [
   { id: "home", label: "Home", pathname: "/" },
   { id: "contact", label: "Contact", pathname: "/contact" },
   { id: "blog", label: "Blog", pathname: "/blog" },
+  { id: "focus", label: "Focus", pathname: "/focus" },
 ];
 
 export default function Nav() {

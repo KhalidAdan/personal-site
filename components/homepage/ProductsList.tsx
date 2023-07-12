@@ -17,13 +17,13 @@ const products: Product[] = [
     image: "/eto-logo.jpg",
     href: "https://eto.news",
   },
-  {
-    name: "Skillbox",
-    description: "A platform for building a culture of learning. More to come!",
-    image: "/sb.svg",
-    // href: "https://skillbox.so",
-    href: "",
-  },
+  // {
+  //   name: "Skillbox",
+  //   description: "A platform for building a culture of learning. More to come!",
+  //   image: "/sb.svg",
+  //   // href: "https://skillbox.so",
+  //   href: "",
+  // },
 ];
 
 export default function ProductsList({ variants }: { variants: Variants }) {
