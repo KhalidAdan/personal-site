@@ -1,7 +1,7 @@
 ---
 title: "Designing APIs and SDKs: A Look at Ousterhout’s Philosophy"
 description: "The article discusses concepts like problem decomposition, maintaining consistency, simplicity, deep modules, robust error handling, and the importance of feedback, all within the context of user-centric design."
-date: 2023-07-025T04:00:00.000Z
+date: 2023-07-25T04:00:00.000Z
 tags:
   - Development
   - APIs
