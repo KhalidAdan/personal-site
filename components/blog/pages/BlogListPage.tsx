@@ -14,7 +14,7 @@ import BlogBadge from "../BlogBadge";
 const animation = getAnimationVariants("fadeInFromBottom");
 
 const childVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0.0001, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -55,7 +55,7 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
                     <img
                       src={blog.image}
                       alt={`${blog.title} cover image`}
-                      className="w-full object-cover object-center rounded-lg shadow-md"
+                      className="w-full max-h-80 object-cover object-center rounded-lg shadow-md"
                       loading="lazy"
                       aria-label={blog.title}
                       aria-describedby="image-description"

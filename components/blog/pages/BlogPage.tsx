@@ -14,7 +14,7 @@ import { notFound } from "next/navigation";
 const animation = getAnimationVariants("fadeInFromBottom");
 
 const childVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0.0001, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 

@@ -20,7 +20,7 @@ export default function Nav() {
   return (
     <motion.aside
       className="sm:min-w-[150px] sm:mt-64 pt-2 mb-10 sm:mb-6 text-left"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.0001 }}
       animate={{ opacity: 1 }}
     >
       <nav>

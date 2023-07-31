@@ -10,7 +10,7 @@ import { getAnimationVariants } from "@/lib/utils";
 import { Variants } from "framer-motion";
 
 const childVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0.0001, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 

@@ -21,7 +21,7 @@ export function getAnimationVariants(name: keyof AnimationVariants): Variants {
 
 const fadeInYAxis: Variants = {
   hidden: {
-    opacity: 0,
+    opacity: 0.0001,
     y: 20,
     transition: {
       type: "spring",
@@ -44,7 +44,7 @@ const fadeInYAxis: Variants = {
 
 const slideInXAxis: Variants = {
   hidden: {
-    opacity: 0,
+    opacity: 0.0001,
     x: -2000,
     transition: {
       type: "spring",

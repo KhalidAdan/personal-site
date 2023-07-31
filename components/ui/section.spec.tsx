@@ -60,7 +60,7 @@ describe("AnimatedSection", () => {
 
   it("applies the correct styles after animating", async () => {
     const animation = {
-      hidden: { opacity: 0 },
+      hidden: { opacity: 0.0001 },
       visible: { opacity: 1 },
     };
     const component = (

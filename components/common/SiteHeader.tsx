@@ -23,7 +23,7 @@ export default function SiteHeader() {
       </Link>{" "}
       {isHovered && (
         <motion.span
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0.0001 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="text-muted-foreground text-sm"
@@ -33,7 +33,7 @@ export default function SiteHeader() {
       )}
       {isHovered && (
         <motion.p
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0.0001, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
           className="text-muted-foreground text-sm"
