@@ -77,7 +77,7 @@ export default function Blog({
             <img
               src={image}
               alt={`${title} cover image`}
-              className="rounded-lg mt-2 mb-0 object-cover object-center max-h-64 sm:max-h-72"
+              className="rounded-lg mt-2 mb-0 object-cover object-center sm:max-h-72"
               loading="lazy"
               aria-label={title}
               aria-describedby="image-description"
