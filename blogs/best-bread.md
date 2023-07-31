@@ -8,8 +8,6 @@ tags:
   - 4FUN
 ---
 
-![Bread looking GOOD](https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2020-02/the-easiest-loaf-of-bread-youll-ever-bake.jpg?itok=j89yDeId)
-
 Source: https://www.kingarthurbaking.com/recipes/the-easiest-loaf-of-bread-youll-ever-bake-recipe
 
 ## Making the Dough
