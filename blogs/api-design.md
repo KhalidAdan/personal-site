@@ -15,7 +15,7 @@ Earlier in my career, an old boss gifted me a book that has remained a valuable 
 
 APIs and SDKs are indispensable tools in a developer's arsenal. APIs define how software applications interact, while SDKs provide a collection of tools and libraries that enable developers to create applications for specific platforms or frameworks.
 
-However, to effectively design APIs and SDKs, one must deeply understand the users. After all, it's fellow developers who interact with your interfaces and kits, and their needs should spearhead your design process. You must grasp their technical capabilities, their requirements, and the problems they're trying to solve. An excellent API or SDK should not only meet these needs but do so in a manner that's intuitive and efficient.
+However, to effectively design APIs and SDKs, one must deeply understand the users. After all, it's fellow developers who interact with your interfaces and kits, and their needs should spearhead your design process. You must grasp their technical capabilities (though it could be argued a great API is sufficiently simple enough that anyone could use it), their requirements, and the problems they're trying to solve. An excellent API or SDK should not only meet these needs but do so in a manner that's intuitive and efficient.
 
 Central to this understanding is the concept of problem decomposition. In his book, Ousterhout emphasizes the significance of this concept, which involves breaking down large, intricate problems into smaller, more manageable sub-problems.
 
