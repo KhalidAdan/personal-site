@@ -10,6 +10,15 @@ tags:
 
 Source: https://www.kingarthurbaking.com/recipes/the-easiest-loaf-of-bread-youll-ever-bake-recipe
 
+## Ingredients
+- 4 1/2 to 5 cups (540g to 600g) King Arthur Unbleached Bread Flour
+- 1 tablespoon (11g) granulated sugar
+- 2 1/4 teaspoons instant yeast
+- 2 1/2 teaspoons (15g) salt
+- 1 2/3 cups (379g) water, lukewarm (90°F to 110°F)
+- yellow cornmeal, for coating the pan
+
+
 ## Making the Dough
 
 Begin by weighing your flour or measure it by gently spooning it into a cup, then sweeping off any excess.
