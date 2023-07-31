@@ -1,7 +1,7 @@
 ---
 title: "Baking Bread"
 description: "Simple and tasty bread. Can't misplace the recipe now!"
-date: 2023-07-25T04:00:00.000Z
+date: 2023-07-31T04:00:00.000Z
 image: "https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2020-02/the-easiest-loaf-of-bread-youll-ever-bake.jpg?itok=j89yDeId"
 tags:
   - Baking
