@@ -55,7 +55,7 @@ export default function BlogListPage({ isDev }: BlogPageProps) {
                     <img
                       src={blog.image}
                       alt={`${blog.title} cover image`}
-                      className="w-full max-h-64 object-cover object-center rounded-lg shadow-md"
+                      className="w-full object-cover object-center rounded-lg shadow-md"
                       loading="lazy"
                       aria-label={blog.title}
                       aria-describedby="image-description"
