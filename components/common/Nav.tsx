@@ -10,8 +10,8 @@ type Tabs = Tab[];
 
 let tabs: Tabs = [
   { id: "home", label: "Home", pathname: "/" },
-  { id: "contact", label: "Contact", pathname: "/contact" },
-  { id: "blog", label: "Blog", pathname: "/blog" },
+  // { id: "contact", label: "Contact", pathname: "/contact" },
+  // { id: "blog", label: "Blog", pathname: "/blog" },
 ];
 
 export default function Nav() {
