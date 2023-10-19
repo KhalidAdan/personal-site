@@ -18,8 +18,9 @@ const products: Product[] = [
     href: "https://eto.news",
   },
   {
-    name: "Skillbox",
-    description: "A platform for building a culture of learning. More to come!",
+    name: "Palabor",
+    description:
+      "A platform that rethinks how news should be disseminated. More to come!",
     image: "/sb.svg",
     // href: "https://skillbox.so",
     href: "",

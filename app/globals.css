@@ -16,8 +16,7 @@
   }
 }
 
-/* 
-// svg BG
+
 html {
   position: relative;
 }
@@ -36,7 +35,7 @@ body::after {
 
 body::before {
   filter: url(#space-filter);
-} */
+}
 
 /* body {
   color: rgb(var(--foreground-rgb));
