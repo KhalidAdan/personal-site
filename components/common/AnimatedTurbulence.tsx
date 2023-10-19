@@ -1,6 +1,3 @@
-// TBD ISSUES:
-// Safari :(
-
 export default function AnimatedTurbulence() {
   return (
     <svg
@@ -8,7 +5,7 @@ export default function AnimatedTurbulence() {
       version="1.1"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       opacity="0.45"
-      className="h-0 motion-reduce:hidden pointer-events-none"
+      className="h-0 motion-reduce:hidden pointer-events-none transform-gpu"
     >
       <defs>
         <filter id="space-filter">

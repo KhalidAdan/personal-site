@@ -24,6 +24,7 @@ export default function ContactForm({ variants }: ContactFormProps) {
   const { register, handleSubmit, reset } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     setIsSending(true);
+    console.log("sending message");
     const response = await fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify(data),
@@ -69,7 +70,7 @@ export default function ContactForm({ variants }: ContactFormProps) {
       </div>
       <Textarea
         className=""
-        placeholder="Type your message here."
+        placeholder="Type your message here..."
         rows={6}
         {...register("message", { required: true })}
       />

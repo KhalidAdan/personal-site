@@ -1,13 +1,11 @@
 import ContactEmail from "@/emails";
-import { env } from "@/env";
 import { render } from "@react-email/render";
 import { NextResponse } from "next/server";
-import { Client } from "postmark";
-
-// testing next 13 route handlers https://www.npmjs.com/package/next-test-api-route-handler WIP
+import { ServerClient } from "postmark";
 
 export async function POST(req: Request) {
-  const token = env.POSTMARK_API_TOKEN;
+  console.log("INSIDE ROUTE");
+  const token = process.env.POSTMARK_API_TOKEN;
 
   const { name, email, message } = await req.json();
   if (!name || !email || !message) {
@@ -17,24 +15,27 @@ export async function POST(req: Request) {
     });
   }
 
-  const client = new Client(token);
+  console.log("Sending email to", email);
 
-  // cannot update the values for from and to until postmark tells me I'm verified
-  const response = await client.sendEmail({
-    From: "me@khld.dev",
-    To: "khalid.adan@gmail.com",
-    Subject: "A new message from khld.dev",
-    HtmlBody: render(
-      ContactEmail({
-        name: name,
-        email: email,
-        message: message,
-      })
-    ),
-  });
+  const client = new ServerClient(token);
 
-  if (response.ErrorCode) {
-    return NextResponse.json({ status: 500, message: response.Message });
-  }
-  //redirect(env.PUBLIC_CONTACT_URL);
+  await client
+    .sendEmail({
+      From: process.env.POSTMARK_FROM_EMAIL_ADDRESS,
+      To: email,
+      Subject: "A new message from khld.dev",
+      HtmlBody: render(
+        ContactEmail({
+          name: name,
+          email: email,
+          message: message,
+        })
+      ),
+    })
+    .catch((err) => {
+      console.log(err);
+      return NextResponse.json({ status: 500, message: err });
+    });
+
+  return NextResponse.json({ status: 200, message: "Email sent" });
 }

@@ -1,22 +1,24 @@
-import { createEnv } from "@t3-oss/env-core";
-import { z } from "zod";
+import { z, ZodError } from "zod";
 
-export const env = createEnv({
-  /*
-   * Specify what prefix the client-side variables must have.
-   * This is enforced both on type-level and at runtime.
-   */
-  clientPrefix: "PUBLIC_",
-  server: {
-    NODE_ENV: z.enum(["development", "production", "test"]),
-    POSTMARK_API_TOKEN: z.string().min(1),
-  },
-  client: {
-    PUBLIC_CONTACT_URL: z.string(),
-  },
-  /**
-   * What object holds the environment variables at runtime.
-   * Often `process.env` or `import.meta.env`
-   */
-  runtimeEnv: process.env,
+const envSchema = z.object({
+  POSTMARK_API_TOKEN: z.string(),
+  POSTMARK_FROM_EMAIL_ADDRESS: z.string(),
 });
+
+// throw if missing!
+try {
+  envSchema.parse(process.env);
+} catch (e) {
+  if (e instanceof ZodError) {
+    console.error("Missing or invalid environment variables:", e.errors);
+  } else {
+    console.error("An unknown error occurred:", e);
+  }
+  process.exit(1);
+}
+
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv extends z.infer<typeof envSchema> {}
+  }
+}
