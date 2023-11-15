@@ -20,7 +20,7 @@ const products: Product[] = [
   {
     name: "Palabor",
     description:
-      "A platform that rethinks how news should be disseminated. More to come!",
+      "A platform that rethinks how creative publishing should work. More to come!",
     image: "/sb.svg",
     // href: "https://skillbox.so",
     href: "",
