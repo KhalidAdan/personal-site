@@ -57,7 +57,7 @@ export default function RootLayout({
           </section>
         </main>
         {/* Does not have any effect until the SVG is enabled in the globals.css file by adding the filter defined here */}
-        <AnimatedTurbulence />
+        {/* <AnimatedTurbulence /> */}
       </body>
     </html>
   );
