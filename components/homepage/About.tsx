@@ -8,7 +8,7 @@ export default function About({ variants }: { variants: Variants }) {
   return (
     <AnimatedSection variants={variants} className="mt-0">
       <TypographyH1>
-        I help humans build software that solves problems.
+        I help teams build software that solves problems.
       </TypographyH1>
       <TypographyLead>
         I&apos;m Khalid Adan, a software developer working out of Ottawa,
