@@ -1,6 +1,7 @@
 ---
 title: "Fixing the “Buy Now” Issue for GTA V on Steam Deck"
 description: "Clear, step-by-step instructions for getting Grand Theft Auto V (Legacy or Enhanced) to show the Install/Play button on a Steam Deck using Heroic Launcher, Proton Experimental/GE, and the new USE_FAKE_EPIC_EXE fix."
+image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3240220/0231bf16835cd4f6d83523d76aa8d91cb2dfef9b/ss_0231bf16835cd4f6d83523d76aa8d91cb2dfef9b.1920x1080.jpg?t=1741381848"
 date: 2025-05-24T04:00:00.000Z
 tags:
   - Steam Deck
