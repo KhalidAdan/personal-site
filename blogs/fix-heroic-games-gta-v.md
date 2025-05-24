@@ -7,8 +7,6 @@ tags:
   - Steam Deck
   - GTA V
   - Heroic Launcher
-  - Personal
-  - Troubleshooting
 ---
 
 
